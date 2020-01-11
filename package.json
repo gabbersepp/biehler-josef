@@ -1,0 +1,18 @@
+{
+  "name": "biehler-josef.de",
+  "version": "1.0.0",
+  "description": "This repository will contain the stuff for my personal static website.",
+  "main": "index.js",
+  "scripts": {
+    "11ty": "eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabbersepp/biehler-josef.de.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.9.0"
+  }
+}
