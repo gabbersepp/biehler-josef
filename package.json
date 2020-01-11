@@ -4,7 +4,8 @@
   "description": "This repository will contain the stuff for my personal static website.",
   "main": "index.js",
   "scripts": {
-    "11ty": "eleventy"
+    "11ty": "eleventy",
+    "upload": "node ./build/ftp.js"
   },
   "repository": {
     "type": "git",
@@ -13,6 +14,7 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "@11ty/eleventy": "^0.9.0"
+    "@11ty/eleventy": "^0.9.0",
+    "basic-ftp": "^4.5.2"
   }
 }
