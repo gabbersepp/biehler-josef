@@ -1,8 +1,6 @@
 // take all from ./page and upload it
 const ftp = require("basic-ftp")
  
-upload()
- 
 async function upload() {
     const client = new ftp.Client();
     client.ftp.verbose = true;
@@ -21,3 +19,5 @@ async function upload() {
 
     client.close();
 }
+
+upload()
