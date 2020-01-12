@@ -9,7 +9,8 @@ module.exports = function(eleventyConfig) {
   return {
     dir: {
       input: "page/views",
-      output: "page/dist"
+      output: "page/dist",
+      includes: "../_includes"
     }
   }
 }
