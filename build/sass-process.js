@@ -13,19 +13,13 @@ function transform(scssPath, cssPath) {
 
 module.exports = (scssPath, cssPath) => {
     console.log(`Transforming '${scssPath}' to '${cssPath}'`)
-    //If cssPath directory doesn't exist...
-    if(!fs.existsSync(path.dirname(cssPath))) {
-        //Encapsulate rendered css from scssPath into result variable
-        const result = sass.renderSync({file: scssPath});
-        //Create cssPath directory recursively
-        fs.mkdir(path.dirname(cssPath), {recursive: true})
-        //Then write result css string to cssPath file
-        .then(() => fs.writeFile(cssPath, result.css.toString()))
-        .catch(error => console.error(error))
-    }
     transform(scssPath, cssPath);
-    //Watch for changes to scssPath directory...
-    fs.watch(path.dirname(scssPath), () => {
-      transform(scssPath, cssPath);
-    });
+
+    if (process.env.SASSWATCH == 1) {
+        console.log("starting watch task for sass");
+        //Watch for changes to scssPath directory...
+        fs.watch(path.dirname(scssPath), () => {
+            transform(scssPath, cssPath);
+        });
+    }
 }
