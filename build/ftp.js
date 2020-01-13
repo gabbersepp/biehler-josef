@@ -12,9 +12,10 @@ async function upload() {
             password: process.env.FTP_PWD,
             secure: true
         });
-        await client.uploadFromDir("./page/dist", "./");
+        await client.uploadFromDir("./dist", "./");
     } catch(err) {
         console.log(err);
+        throw err;
     }
 
     client.close();
