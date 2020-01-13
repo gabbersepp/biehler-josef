@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% if pageDescription !== '' %}
+        <meta name="description" content="{{ pageDescription }}">
+    {% endif %}
+    <link rel="stylesheet" href="/index.css">
+    
+    <title>{{ pageTitle }}</title>
+</head>
+<body>
+
+    {% if page.url !== "/" %}
+    <header>
+        <h1>{{ pageTitle }}</h1>
+        <div class="hr"></div>
+    </header>
+    {% endif %}
+
+    {{ content | safe }}
+    
+    <footer>
+    Josef Biehler | Impressum | gabbersepp@googlemail.com
+    </footer>
+</body>
+</html>

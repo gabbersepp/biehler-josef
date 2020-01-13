@@ -1,0 +1,159 @@
+@font-face {
+  font-family: "Lato-Black";
+  src: url("Lato-Black.ttf");
+}
+@font-face {
+  font-family: "Lato-Bold";
+  src: url("Lato-Bold.ttf");
+}
+html, body {
+  height: 100%;
+  font-size: 12pt;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: beige;
+  font-family: "Lato-Bold", Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+#intro {
+  width: 50%;
+  border: 0.5rem black solid;
+  padding: 0.5rem;
+  background-color: white;
+  cursor: pointer;
+  transition-property: width;
+  transition-delay: 2s;
+  box-shadow: 10px 10px burlywood;
+}
+
+#intro #image {
+  width: 300px;
+  height: 300px;
+  float: left;
+  padding-right: 0.5rem;
+  border-right: 0.5rem solid black;
+  /*display: float;
+  justify-content: center;
+  align-items: center;*/
+}
+
+#image img {
+  width: 100%;
+  height: 100%;
+}
+
+#intro-text {
+  float: right;
+  height: 300px;
+  width: calc(100% - 300px - 0.5rem);
+  margin-left: 0.5rem;
+  padding: 0.2rem;
+  font-family: "Lato-Black", Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+#intro::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+footer {
+  font-size: 10pt;
+  text-align: center;
+  width: 100%;
+  position: sticky;
+  bottom: 10px;
+  z-index: 200;
+}
+
+header {
+  text-align: center;
+  width: 100%;
+  position: sticky;
+  top: 10px;
+  z-index: 200;
+}
+
+.hr {
+  width: 100%;
+  border-top: 1px solid black;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+#categories {
+  display: flex;
+  width: 50%;
+}
+
+.category-wrapper {
+  position: relative;
+}
+
+.category {
+  box-shadow: 10px 10px burlywood;
+  background-color: yellow;
+  width: 200px;
+  height: 200px;
+  margin: 1rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.category .title {
+  position: absolute;
+  top: 5px;
+  z-index: 100;
+  background-color: aliceblue;
+  padding-bottom: 0.8rem;
+  padding-top: 0.8rem;
+  text-align: center;
+  display: block;
+  width: 100%;
+}
+
+.category .img {
+  height: 100%;
+  background-color: red;
+  overflow: hidden;
+}
+
+.coding-background img {
+  transform: rotate3d(1, 1, 1, 45deg) translateX(-100px);
+}
+
+@keyframes test {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+.category:hover {
+  animation-name: test;
+  animation-duration: 2s;
+  outline: 1px solid black;
+}
+
+#tiles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
