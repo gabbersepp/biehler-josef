@@ -42,7 +42,7 @@ async function getLatestEarningsPost(hashtag) {
     const results = tweets.map(x => ({
         fullText: tweets[1].full_text,
         createdAt: tweets[1].created_at,
-        id: tweets[1].id,
+        id: tweets[1].id_str,
         mediaUrl: tweets[1].extended_entities.media[0].media_url
     }));
 

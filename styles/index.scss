@@ -169,3 +169,33 @@ header {
     justify-content: center;
     align-items: center;
 }
+
+.tile-wrapper {
+    position: relative;
+}
+.tile {
+    &:hover {
+        animation-name: test;
+        animation-duration: 2s;
+        outline: 1px solid black;
+    }
+    box-shadow: 10px 10px burlywood ;
+    background-color: yellow;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    margin: 1rem;
+    cursor: pointer;
+    position: relative;
+}
+
+.drawing-tile {
+    .img {
+        width: 200px;
+        height: 200px;
+        overflow: hidden;
+    }
+    img {
+        width: 200px;
+    }
+}

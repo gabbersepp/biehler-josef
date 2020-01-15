@@ -23,3 +23,10 @@ pageTitle: Josef Biehler - Overview
             </div>
         </div>
     </div>
+
+    <script>
+    document.querySelectorAll(".category-wrapper").forEach(e => {
+        const clazz = e.classList[1];
+        e.addEventListener("click", () => document.location = "/" + clazz + "/index.html");
+    })
+    </script>
