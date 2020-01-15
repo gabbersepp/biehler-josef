@@ -1,9 +1,10 @@
 const Twitter = require("twitter-lite");
 const fs = require("fs");
+const download = require("./downloader.js")
 
-async function getLatestEarningsPost(hashtag) {
-    let tweets = JSON.parse(fs.readFileSync("./data/tweets.json").toString());
-    const ids = tweets.map(x => x.id).sort().reverse();
+async function getLatestEarningsPost() {
+    const existingTweets  = readTweets();
+    const ids = existingTweets.map(x => x.id).sort().reverse();
     const maxId = ids.length > 0 ? ids[0] : 1;
 
     const client = new Twitter({
@@ -21,42 +22,61 @@ async function getLatestEarningsPost(hashtag) {
         exclude_replies: true,
         include_rts: false,
         tweet_mode: "extended",
-        count: 5,
-        since_id: maxId
+        count: 200,
+        since_id: maxId.toString()
     });
 
-    tweets = timeline
-    //tweets = timeline.filter(x => x.full_text.indexOf(hashtag) > -1);
-
-    if (!tweets || tweets.length == 0) {
-        throw new Error("tweet_not_found");
-    }
-
-    for (var i = 0; i < tweets.length; i++) {
-        let tweet = tweets[i];
-        tweets[i] = await client.get(`statuses/show/${tweet.id_str}`, {
+    for (var i = 0; i < timeline.length; i++) {
+        let tweet = timeline[i];
+        timeline[i] = await client.get(`statuses/show/${tweet.id_str}`, {
             tweet_mode: "extended"
         });
     }
 
-    const results = tweets.map(x => ({
-        fullText: tweets[1].full_text,
-        createdAt: tweets[1].created_at,
-        id: tweets[1].id_str,
-        mediaUrl: tweets[1].extended_entities.media[0].media_url
+    const getHashtags = x => {
+        if (x.entities && x.entities.hashtags) {
+            return x.entities.hashtags.map(x => x.text);
+        }
+        return [];
+    }
+
+    const results = timeline.map(x => ({
+        fullText: x.full_text,
+        createdAt: x.created_at,
+        id: x.id_str,
+        twitterMediaUrl: x.extended_entities ? x.extended_entities.media[0].media_url : null,
+        hashtags: getHashtags(x)
     }));
 
-    fs.writeFileSync("./data/tweets.json", JSON.stringify(results));
+    for (var i = 0; i < results.length; i++) {
+        const x = results[i];
+        const path = await download(x.mediaUrl, x.id);
+        x.twitterMediaUrl = x.mediaUrl;
+        x.mediaUrl = "/data/twitter/" + path;
+    }
 
-    return results;
+    const merged = [...existingTweets, ...results].map(x => {
+        x.id = BigInt(x.id)
+        return x;
+    }).sort((a, b) => a < b ? 1 : -1)
+    .map(x => {
+        x.id = x.id.toString();
+        return x;
+    });
+
+    fs.writeFileSync("./data/tweets.json", JSON.stringify(merged));
+
+    return merged;
 }
 
-// if we add a new tag, we must delete the existing tweets? hm not sure how we can handle this
-// at least if we add a tag that exists already in older tweets
+function readTweets() {
+    return JSON.parse(fs.readFileSync("./data/tweets.json").toString()).map(x => {
+        x.id = BigInt(x.id);
+        return x;        
+    });
+}
 
-getLatestEarningsPost("digitalart").catch(e => {
+getLatestEarningsPost().catch(e => {
     console.error(e);
-})
-
-
-//module.exports = getLatestEarningsPost;
+    throw e;
+});

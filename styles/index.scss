@@ -89,16 +89,24 @@ footer {
     text-align: center;
     width: 100%;
     position: sticky;
-    bottom: 10px;
+    bottom: 0px;
+    background-color: beige;
+    padding-bottom: 10px;
     z-index: 200;
 }
 
 header {
     text-align: center;
     width: 100%;
-    position: sticky;
-    top: 10px;
+    top: 0px;
+    background-color: beige;
     z-index: 200;
+    height: 100px;
+}
+
+#main-content {
+    height: calc(100% - 100px);
+    overflow: scroll;
 }
 
 .hr {
@@ -180,7 +188,7 @@ header {
         outline: 1px solid black;
     }
     box-shadow: 10px 10px burlywood ;
-    background-color: yellow;
+    background-color: white;
     width: 200px;
     height: 200px;
     overflow: hidden;
@@ -194,6 +202,9 @@ header {
         width: 200px;
         height: 200px;
         overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     img {
         width: 200px;

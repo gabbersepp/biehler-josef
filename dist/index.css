@@ -77,16 +77,24 @@ footer {
   text-align: center;
   width: 100%;
   position: sticky;
-  bottom: 10px;
+  bottom: 0px;
+  background-color: beige;
+  padding-bottom: 10px;
   z-index: 200;
 }
 
 header {
   text-align: center;
   width: 100%;
-  position: sticky;
-  top: 10px;
+  top: 0px;
+  background-color: beige;
   z-index: 200;
+  height: 100px;
+}
+
+#main-content {
+  height: calc(100% - 100px);
+  overflow: scroll;
 }
 
 .hr {
@@ -156,4 +164,36 @@ header {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+}
+
+.tile-wrapper {
+  position: relative;
+}
+
+.tile {
+  box-shadow: 10px 10px burlywood;
+  background-color: white;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  margin: 1rem;
+  cursor: pointer;
+  position: relative;
+}
+.tile:hover {
+  animation-name: test;
+  animation-duration: 2s;
+  outline: 1px solid black;
+}
+
+.drawing-tile .img {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.drawing-tile img {
+  width: 200px;
 }
