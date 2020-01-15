@@ -17,14 +17,16 @@
         <h1>{{ pageTitle }}</h1>
         <div class="hr"></div>
     </header>
-    {% endif %}
-
+    
     <div id="main-content">
+    {% endif %}
 
         {{ content | safe }}
     
+    {% if page.url === "/" %}
     </div>
-
+    {% endif %}
+    
     <footer>
     Josef Biehler | Impressum | gabbersepp@googlemail.com
     </footer>
