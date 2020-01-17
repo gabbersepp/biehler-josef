@@ -16,7 +16,7 @@ async function upload() {
 
         client.upload(['dist/**'], '/', {
             //baseDir: 'test',
-            overwrite: 'older'
+            overwrite: 'all'
         }, function (result) {
             console.log(result);
         });
