@@ -8,7 +8,7 @@ async function upload() {
         secure: true
     },
     options = {
-        logging: 'basic'
+        logging: 'debug'
     },
     client = new ftpClient(config, options);
 
