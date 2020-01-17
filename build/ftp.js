@@ -15,7 +15,7 @@ async function upload() {
     client.connect(function () {
 
         client.upload(['dist/**'], '/', {
-            //baseDir: 'test',
+            baseDir: 'dist',
             overwrite: 'all'
         }, function (result) {
             console.log(result);
