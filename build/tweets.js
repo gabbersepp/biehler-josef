@@ -44,25 +44,30 @@ async function getLatestEarningsPost() {
         fullText: x.full_text,
         createdAt: x.created_at,
         id: x.id_str,
-        twitterMediaUrl: x.extended_entities ? x.extended_entities.media[0].media_url : null,
+        mediaUrl: x.extended_entities ? x.extended_entities.media[0].media_url : null,
         hashtags: getHashtags(x)
     }));
 
     for (var i = 0; i < results.length; i++) {
         const x = results[i];
+        if (!x.mediaUrl) {
+            continue;
+        }
         const path = await download(x.mediaUrl, x.id);
         x.twitterMediaUrl = x.mediaUrl;
         x.mediaUrl = "/data/twitter/" + path;
     }
 
-    const merged = [...existingTweets, ...results].map(x => {
-        x.id = BigInt(x.id)
-        return x;
-    }).sort((a, b) => a < b ? 1 : -1)
-    .map(x => {
-        x.id = x.id.toString();
-        return x;
-    });
+    const merged = [...existingTweets, ...results]
+        .map(x => {
+            x.id = BigInt(x.id)
+            return x;
+        })
+        .sort((a, b) => a.id < b.id ? 1 : -1)
+    	.map(x => {
+            x.id = x.id.toString();
+            return x;
+        });
 
     fs.writeFileSync("./data/tweets.json", JSON.stringify(merged));
 
