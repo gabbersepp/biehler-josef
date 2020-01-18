@@ -12,3 +12,4 @@ script:
   - npm run 11ty
   - npm run zip
   - npm run upload
+  - npm run unzip

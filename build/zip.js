@@ -3,7 +3,7 @@ var archiver = require('archiver');
 
 var fileName =   'test.zip'
 var fileOutput = fs.createWriteStream(fileName);
-const archive = archiver('zip', { zlib: { level: 9 }});
+const archive = archiver('zip');
 
 fileOutput.on('close', function () {
     console.log(archive.pointer() + ' total bytes');
@@ -11,7 +11,8 @@ fileOutput.on('close', function () {
 });
 
 archive.pipe(fileOutput);
-archive.glob("./dist/**/*"); //some glob pattern here
+//archive.glob("./dist/**/*"); //some glob pattern here
+archive.directory('dist/', false);
 //archive.glob("../dist/.htaccess"); //another glob pattern
 // add as many as you like
 archive.on('error', function(err){
