@@ -55,7 +55,7 @@ async function getLatestEarningsPost() {
         }
         const path = await download(x.mediaUrl, x.id);
         x.twitterMediaUrl = x.mediaUrl;
-        x.mediaUrl = "/data/twitter/" + path;
+        x.mediaUrl = path;
     }
 
     const merged = [...existingTweets, ...results]
