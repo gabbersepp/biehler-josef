@@ -6,10 +6,9 @@
   "scripts": {
     "11ty": "eleventy",
     "11ty-serve": "cross-env SASSWATCH=1 eleventy --serve",
-    "upload": "node ./build/ftp.js",
+    "upload": "node ./build/upload.js",
     "twitter": "node ./build/tweets.js",
-    "zip": "node ./build/zip.js",
-    "unzip": "node ./build/unzip.js"
+    "zip": "node ./build/zip.js"
   },
   "repository": {
     "type": "git",
@@ -20,11 +19,8 @@
   "devDependencies": {
     "@11ty/eleventy": "^0.9.0",
     "archiver": "^3.1.1",
-    "axios": "^0.19.1",
     "cross-env": "^6.0.3",
     "fs-extra": "^8.1.0",
-    "ftp": "0.3.6",
-    "ftp-client": "git+https://git@github.com/gabbersepp/node-ftp-client.git",
     "request": "^2.88.0",
     "sass": "^1.24.4",
     "twitter-lite": "^0.9.4"
