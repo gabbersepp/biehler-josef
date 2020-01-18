@@ -1,10 +1,10 @@
 @font-face {
   font-family: "Lato-Black";
-  src: url("Lato-Black.ttf");
+  src: url("assets/Lato-Black.ttf");
 }
 @font-face {
   font-family: "Lato-Bold";
-  src: url("Lato-Bold.ttf");
+  src: url("assets/Lato-Bold.ttf");
 }
 html, body {
   height: 100%;
@@ -196,4 +196,41 @@ header {
 }
 .drawing-tile img {
   width: 200px;
+}
+
+.project-tile .name {
+  text-align: center;
+  height: 30px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.project-tile .name, .project-tile .description {
+  margin: 5px;
+  outline: 1px black solid;
+  padding: 5px;
+}
+.project-tile .description {
+  height: 110px;
+  overflow: hidden;
+}
+.project-tile .metadata {
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 0.8rem;
+  padding: 5px;
+}
+.project-tile .language {
+  background-color: khaki;
+}
+.project-tile .forks-count, .project-tile .watchers-count, .project-tile .issues-count {
+  background-color: greenyellow;
+}
+.project-tile .forks-count, .project-tile .watchers-count, .project-tile .issues-count, .project-tile .language {
+  border-radius: 10%;
+  display: inline;
+  padding: 5px;
 }

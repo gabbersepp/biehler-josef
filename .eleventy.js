@@ -1,5 +1,6 @@
 const fs = require("fs");
 const sass = require("./build/sass-process");
+const readRepositories = require("./build/github.js");
 
 function filterTweets(hashtags) {
   const tweetsStr = fs.readFileSync("./data/tweets.json").toString();
@@ -17,6 +18,7 @@ function filterTweets(hashtags) {
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.addCollection("tweets", () => filterTweets(["digitalart", "comic", "cartoon", "draw", "drawing"]));
+  eleventyConfig.addCollection("repos", () => readRepositories());
 
   eleventyConfig.addPassthroughCopy("./assets");
   eleventyConfig.addPassthroughCopy("./data/images");

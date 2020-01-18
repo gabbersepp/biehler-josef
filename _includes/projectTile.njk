@@ -1,0 +1,16 @@
+<div class="project-tile tile{{entry.id}}">
+    <div class="name" title="{{entry.name}}">{{entry.name}}</div>
+    <div class="description">{{entry.description}}</div>
+    <div class="metadata">
+        <div class="language">{{entry.language}}</div>
+        <div class="issues-count">#i {{entry.openIssuesCount}}</div>
+        <div class="forks-count">#f {{entry.forksCount}}</div>
+        <div class="watchers-count">#w {{entry.watchersCount}}</div>
+    </div>
+</div>
+
+<script>
+    document.querySelector(".tile{{entry.id}}").addEventListener("click", () => {
+        window.open(`{{entry.url}}`, '_blank');
+    })
+</script>

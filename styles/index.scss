@@ -1,13 +1,13 @@
 
 @font-face {
     font-family: "Lato-Black";
-    src: url("Lato-Black.ttf");
+    src: url("assets/Lato-Black.ttf");
 }
     
 
 @font-face {
     font-family: "Lato-Bold";
-    src: url("Lato-Bold.ttf");
+    src: url("assets/Lato-Bold.ttf");
 }
 
 html, body {
@@ -208,5 +208,45 @@ header {
     }
     img {
         width: 200px;
+    }
+}
+
+.project-tile {
+    .name {
+        text-align: center;
+        height: 30px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .name, .description {
+        margin: 5px;
+        outline: 1px black solid;
+        padding: 5px;
+    }   
+    .description {
+        height: 110px;
+        overflow: hidden;
+    }
+    .metadata {
+        margin-top: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        font-size: 0.8rem;
+        padding: 5px;
+    }
+    .language {
+        background-color: khaki;
+    }
+    .forks-count, .watchers-count, .issues-count {
+        background-color: greenyellow;
+    }
+    .forks-count, .watchers-count, .issues-count, .language {
+        
+        border-radius: 10%;
+        display: inline;
+        padding: 5px;
     }
 }
