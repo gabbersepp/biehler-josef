@@ -195,6 +195,14 @@ header {
     margin: 1rem;
     cursor: pointer;
     position: relative;
+
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+
+    &.project-tile {
+        width: 400px;
+        height: 400px;
+    }
 }
 
 .drawing-tile {
