@@ -13,7 +13,7 @@ function readRepositories() {
             repos = repos.filter(x => !x.fork && !x.archived && !x.private).map(x => ({
                 forksCount: x.forks_count,
                 watchersCount: x.watchers_count,
-                url: `${x.html_url}/blob/master/README.md`,
+                url: x.html_url,
                 projectDescriptionUrl: `https://raw.githubusercontent.com/gabbersepp/${x.name}/master/PROJECT.md`,
                 updatedAt: new Date(x.updated_at),
                 description: x.description,
