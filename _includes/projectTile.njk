@@ -1,7 +1,7 @@
-<div class="project-tile tile{{entry.id}}">
-    <div class="name" title="{{entry.name}}">{{entry.name}}</div>
-    <div class="description">{{entry.description}}</div>
-    <div class="metadata">
+<div id="tile{{entry.id}}" class="flex flex--column full-height">
+    <div class="name flex--1 flex center" title="{{entry.name}}"><div>{{entry.name}}</div></div>
+    <div class="description flex--10">{{entry.description}}</div>
+    <div class="metadata flex--1">
         <div class="language">{{entry.language}}</div>
         <div class="issues-count">#i {{entry.openIssuesCount}}</div>
         <div class="forks-count">#f {{entry.forksCount}}</div>
@@ -10,7 +10,7 @@
 </div>
 
 <script>
-    document.querySelector(".tile{{entry.id}}").addEventListener("click", () => {
+    document.querySelector("#tile{{entry.id}}").addEventListener("click", () => {
         window.open(`{{entry.url}}`, '_blank');
     })
 </script>
