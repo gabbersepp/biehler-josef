@@ -1,6 +1,7 @@
 const fs = require("fs");
 const sass = require("./build/sass-process");
 const readRepositories = require("./build/github.js");
+const MarkdownIt = require("markdown-it");
 
 function filterTweets(hashtags) {
   const tweetsStr = fs.readFileSync("./data/tweets.json").toString();
@@ -17,6 +18,13 @@ function filterTweets(hashtags) {
 }
 
 module.exports = function(eleventyConfig) {
+  eleventyConfig.addFilter('markdown', function(value) {
+      let markdown = require('markdown-it')({
+          html: true
+      });
+      return markdown.render(value);
+  });
+
   eleventyConfig.addCollection("tweets", () => filterTweets(["digitalart", "comic", "cartoon", "draw", "drawing"]));
   eleventyConfig.addCollection("repos", () => readRepositories());
 

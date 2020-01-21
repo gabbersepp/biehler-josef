@@ -1,6 +1,6 @@
 <div id="tile{{entry.id}}" class="flex flex--column full-height">
     <div class="name flex--1 flex center" title="{{entry.name}}"><div>{{entry.name}}</div></div>
-    <div class="description flex--10">{{entry.description}}</div>
+    <div class="description flex--10">{{entry.description | markdown | safe }}</div>
     <div class="metadata flex--1">
         <div class="language">{{entry.language}}</div>
         <div class="issues-count">#i {{entry.openIssuesCount}}</div>
