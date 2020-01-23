@@ -4,10 +4,19 @@
     src: url("assets/Lato-Black.ttf");
 }
     
-
 @font-face {
     font-family: "Lato-Bold";
     src: url("assets/Lato-Bold.ttf");
+}
+
+@font-face {
+    font-family: "Merriweather-Regular";
+    src: url("assets/Merriweather-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Monda-Regular";
+    src: url("assets/Monda-Regular.ttf");
 }
 
 html, body {
@@ -29,7 +38,7 @@ body {
 
     background-color: #2d3436;
 
-    font-family: 'Lato-Bold', Arial, sans-serif;
+    font-family: 'Monda-Regular', sans-serif;
     font-weight:normal;
     font-style:normal;   
 }
@@ -73,7 +82,7 @@ body {
     padding: 0.2rem;
 
 
-    font-family: 'Lato-Black', Arial, sans-serif;
+    //font-family: 'Lato-Black', Arial, sans-serif;
     font-weight:normal;
     font-style:normal;      
 }
@@ -90,16 +99,19 @@ footer {
     width: 100%;
     position: fixed;
     bottom: 0px;
-    background-color: #00b894;
+    background-color: #55efc4;
     padding-bottom: 10px;
+    padding-top: 10px;
     z-index: 200;
+    font-family: 'Merriweather-Regular', serif;
 }
 
 header {
+    font-family: 'Merriweather-Regular', serif;
     text-align: center;
     width: 100%;
     top: 0px;
-    background-color: #00b894;
+    background-color: #55efc4;
     z-index: 200;
     height: 100px;
     color: #2d3436;
@@ -296,3 +308,24 @@ header {
 .full-height {
     height: 100%;
 }
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  
