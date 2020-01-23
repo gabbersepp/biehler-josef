@@ -1,7 +1,6 @@
 const fs = require("fs");
 const sass = require("./build/sass-process");
 const readRepositories = require("./build/github.js");
-const MarkdownIt = require("markdown-it");
 
 function filterTweets(hashtags) {
   const tweetsStr = fs.readFileSync("./data/tweets.json").toString();
