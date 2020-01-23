@@ -329,3 +329,32 @@ header {
     background: #555;
   }
   
+  @media (max-width: 1070px) {
+      #intro {
+        width: 70%;
+      }
+  }
+
+  @media (max-width: 780px) {
+      #intro {
+          width: 95%;
+      }
+  }
+
+  @media (max-width: 580px) {
+      #intro {
+        #image {
+            display: none;
+        }
+          
+        #intro-text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            text-align: center;
+        }
+      }
+
+  }
