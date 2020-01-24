@@ -25,7 +25,7 @@ function readRepositories() {
 
             for(let i = 0; i < repos.length; i++) {
                 const repo = repos[i];
-                const projectMd = await getRequest(repo.projectDescriptionUrl);
+                let projectMd = await getRequest(repo.projectDescriptionUrl);
 
                 if (!projectMd) {
                     repos.splice(i, 1);
@@ -34,11 +34,30 @@ function readRepositories() {
                 }
                 
                 console.log(`found PROJECT.md for: '${repo.name}'`)
+                projectMd = extendImages(repo.projectDescriptionUrl.replace("PROJECT.md", ""), projectMd);
                 repo.description = projectMd;
             }
             resolve(repos);
         });        
     });
+}
+
+function extendImages(repoUrl, md) {
+    var regex = /\!\[[^\]]+\]\(([^\)]+)\)/g;
+    var results = [];
+    var match;
+    do {
+        match = regex.exec(md);
+        if (match) {
+            results.push(match);
+        }
+    } while(match);
+
+    results.map(x => ({ original: x[1], newUrl: `${repoUrl}${x[1]}` })).forEach(x => {
+        md = md.replace(x.original, x.newUrl);
+    })
+
+    return md;
 }
 
 function getRequest(url) {
