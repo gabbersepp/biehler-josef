@@ -61,8 +61,12 @@ function extendImages(repoUrl, md) {
 }
 
 function getRequest(url) {
-    return new Promise(resolve => {
+    return new Promise((resolve, reject) => {
         request(url, function(err, resp, body) {
+            if (err) {
+                reject(err);
+                return;
+            }
             if (resp.statusCode === 200) {
                 resolve(body);
             } else {

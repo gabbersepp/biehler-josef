@@ -1,0 +1,18 @@
+<div id="tile{{entry.id}}" class="flex flex--column full-height">
+    <div class="cover-image"><img src="{{entry.cover_image}}"></div>
+    <div class="title flex--1" title="{{entry.title}}">{{entry.title}}</div>
+    <div class="description flex--10">{{entry.description }}</div>
+    <div class="metadata flex--1">
+        {% for tag in entry.tag_list %}
+            <div class="tag">#{{tag}}</div>
+        {% endfor %}
+        <div class="comments-count">#i {{entry.comments_count}}</div>
+        <div class="reactions-count">#f {{entry.positive_reactions_count}}</div>
+    </div>
+</div>
+
+<script>
+    document.querySelector("#tile{{entry.id}}").addEventListener("click", () => {
+        window.open(`{{entry.url}}`, '_blank');
+    })
+</script>

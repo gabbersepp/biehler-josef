@@ -1,6 +1,10 @@
 {% if 'project' in page.url %}
     {% set class = 'project-tile' %}
 {% endif %}
+{% if 'dev-blog' in page.url %}
+    {% set class = 'blog-tile' %}
+{% endif %}
+
 
 <div id="tiles">
     {% for entry in data %}

@@ -225,9 +225,9 @@ header {
     border-right: 2px solid black;
     border-bottom: 2px solid black;
 
-    &.project-tile {
+    &.project-tile,&.blog-tile {
         width: 400px;
-        height: 500px;
+        height: 400px;
     }
 }
 
@@ -376,3 +376,47 @@ header {
           max-width: 380px;
       }
   }
+
+.blog-tile {
+    .cover-image img {
+        width: 100%;
+    }
+
+    .title {
+        text-align: center;
+        min-height: 30px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-weight: bold;
+    }
+    .title, .description {
+        margin: 5px;
+        outline: 1px black solid;
+        padding: 5px;
+    }   
+    .description {
+        overflow: hidden;
+    }
+    .metadata {
+        margin-top: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        font-size: 0.8rem;
+        padding: 5px;
+    }
+    .tag {
+        background-color: khaki;
+    }
+    .comments-count, .reaction-count {
+        background-color: greenyellow;
+    }
+    .comments-count, .reaction-count, .tag {
+        
+        border-radius: 10%;
+        display: inline;
+        padding: 5px;
+    }
+}
