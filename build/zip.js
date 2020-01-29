@@ -12,7 +12,12 @@ fileOutput.on('close', function () {
 
 archive.pipe(fileOutput);
 //archive.glob("./dist/**/*"); //some glob pattern here
-archive.directory('dist/', false);
+archive.directory('dist/', false, d => {
+    if (d.name.indexOf("data/images") > -1) {
+        return false;
+    }
+    return d;
+});
 //archive.glob("../dist/.htaccess"); //another glob pattern
 // add as many as you like
 archive.on('error', function(err){
