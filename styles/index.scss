@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'bj';
+    src: url('/assets/bj.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
 
 @font-face {
     font-family: "Lato-Black";
@@ -115,6 +121,52 @@ header {
     z-index: 200;
     height: 100px;
     color: #2d3436;
+
+    .nav {
+        width: 200px;
+        height: 50px;
+        position: absolute;
+
+        .left {
+            height: 100%;
+            width: calc(100% - 20px);
+            position: absolute;
+            background-color: #2d3436;
+            padding-left: 0.5rem;
+            padding-top: 0.2rem;
+            padding-bottom: 0.2rem;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .icons {
+                font-family: "bj";
+                *[class*='icon'] {
+                    height: 30px;
+                    width: 30px;
+                    margin-right: 10px;
+                    color: #55efc4;
+                }
+
+                .icon-wrench:before { content: '\e800'; }
+                .icon-phone:before { content: '\e801'; }
+                .icon-twitter:before { content: '\f099'; }
+                .icon-facebook:before { content: '\f09a'; }
+                .icon-github-circled:before { content: '\f09b'; }
+                .icon-envelope-open:before { content: '\f2b6'; }
+            }
+        }
+
+        .right {
+            height: 100%;
+            width: 20px;
+            background-color: #2d3436;
+            border-radius: 50%;
+            position: absolute;
+            left: calc(100% - 30px);
+        }
+    }
 }
 
 #main-content {
