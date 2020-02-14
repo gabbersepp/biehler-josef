@@ -22,7 +22,7 @@
     "cross-env": "6.0.3",
     "fs-extra": "8.1.0",
     "request": "2.88.2",
-    "sass": "1.24.4",
+    "sass": "1.25.0",
     "twitter-lite": "0.9.4"
   },
   "dependencies": {}
