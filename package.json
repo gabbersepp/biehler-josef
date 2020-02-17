@@ -19,11 +19,11 @@
   "devDependencies": {
     "@11ty/eleventy": "0.10.0",
     "archiver": "3.1.1",
-    "cross-env": "6.0.3",
+    "cross-env": "7.0.0",
     "fs-extra": "8.1.0",
     "request": "2.88.2",
-    "sass": "1.24.4",
-    "tweet-downloader": "^1.0.1",
+    "sass": "1.25.0",
+    "tweet-downloader": "^1.0.2",
     "twitter-lite": "0.9.4"
   },
   "dependencies": {}
