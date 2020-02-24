@@ -15,7 +15,6 @@
     "url": "git+https://github.com/gabbersepp/biehler-josef.de.git"
   },
   "author": "",
-  "license": "MIT",
   "devDependencies": {
     "@11ty/eleventy": "0.10.0",
     "archiver": "3.1.1",
