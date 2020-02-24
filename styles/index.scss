@@ -228,3 +228,36 @@ footer {
         }
     }
 }
+
+#tiles {
+    @include flexcenter();
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+
+    .tile-wrapper {
+        display: inline-block;
+
+        .tile {
+            overflow: hidden;
+            margin: 1rem;
+            cursor: pointer;
+            position: relative;
+            height: 200px;
+            width: 200px;
+        }
+
+        .drawing-tile {
+            .img {
+                width: 200px;
+                max-height: 200px;
+                overflow: hidden;
+                @include flexcenter();
+            }
+            img {
+                width: 200px;
+            }
+        }
+    }
+}

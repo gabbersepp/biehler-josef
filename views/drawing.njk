@@ -2,7 +2,11 @@
 layout: base
 pageTitle: Josef Biehler - Drawings
 tileFile: drawingTile.njk
+
+pagination:
+    data: collections.tweets
+    size: 6
 ---
 
-{% set data = collections.tweets %}
+{% set data = pagination.items %}
 {% include 'tiles.njk' %}
