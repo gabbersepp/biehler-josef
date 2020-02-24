@@ -182,6 +182,40 @@ footer {
     float: left;
 
 }
+
+nav {
+    background-color: $base;
+    color: $light;
+    font-family: "bj";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    padding: 10px;
+    border-radius: 20px;
+    padding-right: 20px;
+    margin-right: -10px;
+    z-index: 200;
+
+    .icons {
+        font-family: "bj";
+        a {
+            text-decoration: none;
+        }
+        *[class*='icon'] {
+            height: 30px;
+            width: 30px;
+            margin-right: 10px;
+            color: $light;
+        }
+
+        .icon-wrench:before { content: '\e800'; }
+        .icon-phone:before { content: '\e801'; }
+        .icon-twitter:before { content: '\f099'; }
+        .icon-facebook:before { content: '\f09a'; }
+        .icon-github-circled:before { content: '\f09b'; }
+        .icon-envelope-open:before { content: '\f2b6'; }
+    }
+}
 #categories {
     width: 99%;
     height: 99%;
