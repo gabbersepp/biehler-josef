@@ -1,0 +1,80 @@
+@import "_config";
+
+.intro {
+    padding-top: 50px;
+    .image {
+        float: left;
+        img {
+            height: 300px;
+            width: auto;
+            border: 4px dashed $base;
+            border-radius: 100%;
+        }
+    }
+
+    .text {
+        float: right;
+        width: 400px;
+        border: 4px dashed $base;
+        padding: 10px;
+    }
+
+    &::after {
+        display: block;
+        content: "";
+        clear: both;
+    }
+}
+
+.content {
+    .cloud {
+        float: left;
+        width: 50%;
+    }
+
+    .call-to {
+        float: right;
+        width: 50%;
+
+        .btn {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.cloud {
+    position: relative;
+    
+    #cloud_canvas {
+        display: none;
+    }
+
+    #cloud_container {
+        span {
+            cursor: pointer;
+        
+            &:hover {
+                background-color: $light;
+            }
+        }
+    }
+}
+
+
+#tag-info {
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 5px;
+    background-color: white;
+    min-width: 100px;
+    min-height: 50px;
+    display: none;
+    border: 1px solid $light;
+    box-shadow: 0px 0px 10px $darkblue;
+
+    &.visible {
+        display: block;
+    }
+}
