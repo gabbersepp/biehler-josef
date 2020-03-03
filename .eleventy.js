@@ -25,12 +25,25 @@ module.exports = function(eleventyConfig) {
       return markdown.render(value);
   });
 
-  eleventyConfig.addCollection("tweets", () => filterTweets(["digitalart", "comic", "cartoon", "draw", "drawing"]));
-  eleventyConfig.addCollection("repos", () => readRepositories());
-  eleventyConfig.addCollection("blogposts", () => devto.getAll());
+  const devtoPromise = devto.getAll();
+  const githubprojectpromise = readRepositories();
+  const drawings = filterTweets(["digitalart", "comic", "cartoon", "draw", "drawing"]);
 
-  eleventyConfig.addPassthroughCopy("./assets");
-  eleventyConfig.addPassthroughCopy("./data/images");
+  eleventyConfig.addCollection("tweets", () => drawings);
+  eleventyConfig.addCollection("tweetsSlice", () => drawings.slice(0, 3));
+  
+  eleventyConfig.addCollection("repos", () => githubprojectpromise);
+  eleventyConfig.addCollection("reposSlice", async () => (await githubprojectpromise).slice(0, 3));
+  
+  eleventyConfig.addCollection("blogposts", () => devtoPromise);
+  eleventyConfig.addCollection("postsSlice", async () => (await devtoPromise).slice(0, 3));
+  
+
+  eleventyConfig.addPassthroughCopy({
+    "./assets": "assets",
+    "./data/images": "data/images",
+    "./node_modules/wordcloud/src/wordcloud2.js": "assets/wordcloud2.js"
+  });
 
   sass('./styles/index.scss', './dist/index.css');
 

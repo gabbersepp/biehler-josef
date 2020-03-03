@@ -1,0 +1,10 @@
+<div id="project{{entry.id}}" class="project-small">
+    <div class="name" title="{{entry.name}}"><div>{{entry.name}}</div></div>
+    <div class="description">{{entry.description | markdown | safe }}</div>
+</div>
+
+<script>
+    document.querySelector("#project{{entry.id}}").addEventListener("click", () => {
+        window.open(`{{entry.url}}`, '_blank');
+    })
+</script>

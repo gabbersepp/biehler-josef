@@ -22,32 +22,26 @@ pageTitle: Josef Biehler - artist, programmer, writer - Overview
             </div>
 
             <div class="list-item">
-                <h1>Projects <div class="btn attention"><a href="/projects">Continue</a></h1>
+                <h1>Projects <div class="btn attention"><a href="/projects">More ...</a></h1>
                 <div class="body-row">
-                <div class="body">
-
-                </div>
-                <div class="body">
-
-                </div>
-                <div class="body">
-
-                </div>
+                    {% for project in collections.reposSlice %}
+                    <div class="body">
+                        {% set entry = project %}
+                        {% include 'projectbodyoverview.njk' %}
+                    </div>
+                    {% endfor %}
                 </div>
             </div>
 
             <div class="list-item">
-                <h1>Drawings <div class="btn attention"><a href="/drawing">Continue</a></h1>
+                <h1>Drawings <div class="btn attention"><a href="/drawing">More ...</a></h1>
                 <div class="body-row">
-                <div class="body">
-
-                </div>
-                <div class="body">
-
-                </div>
-                <div class="body">
-
-                </div>
+                {% for project in collections.tweetsSlice %}
+                    <div class="body">
+                        {% set entry = project %}
+                        {% include 'drawingsbodyoverview.njk' %}
+                    </div>
+                    {% endfor %}
                 </div>
             </div>
 

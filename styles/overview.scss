@@ -80,3 +80,28 @@
         margin-bottom: 5px;
     }
 }
+
+.project-small {
+    font-size: 15px;
+
+    .name {
+        width: 100%;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        font-family: "Monda-Bold";
+        margin-bottom: 5px;
+    }
+
+    .description {
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.drawing-small {
+    img {
+        width: 100%;
+    }
+}
