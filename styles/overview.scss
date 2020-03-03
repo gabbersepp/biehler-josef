@@ -1,0 +1,82 @@
+@import "_config";
+
+.overview {
+    padding-top: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
+
+    .nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
+    .list {
+        width: calc(300px * 3 + 40px);
+        margin-left: auto;
+        margin-right: auto;
+
+        .list-item {
+            margin-bottom: 50px;
+
+            .body ~ .body {
+                margin-left: 20px;
+            }
+            h1 {
+                text-align: center;
+                font-size: 25px;
+                margin-bottom: 10px;
+                position: relative;
+
+                .btn {
+                    font-size: 20px;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                }
+            }
+
+            .body {
+                box-shadow: 0 0 5px $base;
+                width: 300px;
+                height: 300px;
+                overflow: hidden;
+            }
+            
+            .body-row {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+
+                .body {
+                    cursor: pointer;
+
+                    > div {
+                        padding: 2px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.blogpost-small {
+    .cover-image {
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    
+    font-size: 15px;
+
+    .title {
+        width: 100%;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        font-family: "Monda-Bold";
+        margin-bottom: 5px;
+    }
+}
