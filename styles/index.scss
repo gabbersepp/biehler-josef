@@ -3,6 +3,7 @@
 @import "main";
 @import "codecloud";
 @import "overview";
+@import "contributions";
 
 @font-face {
     font-family: 'bj';
@@ -77,6 +78,8 @@ footer {
     a {
         text-decoration: none;
         color: $secondary;
+        display: inline-block;
+        width: 100%;
     }
 
     &.attention {

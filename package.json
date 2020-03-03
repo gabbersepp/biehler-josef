@@ -8,7 +8,8 @@
     "11ty-serve": "cross-env SASSWATCH=1 eleventy --serve",
     "upload": "node ./build/upload.js",
     "twitter": "node ./build/tweets.js",
-    "zip": "node ./build/zip.js"
+    "zip": "node ./build/zip.js",
+    "contributions": "node ./build/contribution.js"
   },
   "repository": {
     "type": "git",

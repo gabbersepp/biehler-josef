@@ -9,6 +9,7 @@ node_js:
 
 script:
   - npm run twitter
+  - npm run contributions
   - npm run 11ty
   - npm run zip
   - npm run upload

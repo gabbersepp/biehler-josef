@@ -1,4 +1,4 @@
-const fs = require("fs");
+const fs = require("fs-extra");
 const sass = require("./build/sass-process");
 const readRepositories = require("./build/github.js");
 const devto = require("./build/devto");
@@ -37,7 +37,6 @@ module.exports = function(eleventyConfig) {
   
   eleventyConfig.addCollection("blogposts", () => devtoPromise);
   eleventyConfig.addCollection("postsSlice", async () => (await devtoPromise).slice(0, 3));
-  
 
   eleventyConfig.addPassthroughCopy({
     "./assets": "assets",
