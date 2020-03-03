@@ -4,13 +4,13 @@ pageTitle: Josef Biehler - artist, programmer, writer - Overview
 ---
     <div class="content overview">
         <div class="nav">
-          <div class="btn"><a href="/index.html">Back</a></div>
+          <div class="btn clear"><a href="/index.html">Back</a></div>
         </div>
 
         <div class="list">
 
             <div class="list-item">
-                <h1>Blog <div class="btn attention"><a href="/dev-blog">More ...</a></h1>
+                <h1>Blog</h1>
                 <div class="body-row">
                     {% for post in collections.postsSlice %}
                     <div class="body">
@@ -19,10 +19,11 @@ pageTitle: Josef Biehler - artist, programmer, writer - Overview
                     </div>
                     {% endfor %}
                 </div>
+                <div class="btn attention more"><a href="/dev-blog">More ...</a></div>
             </div>
 
             <div class="list-item">
-                <h1>Projects <div class="btn attention"><a href="/projects">More ...</a></h1>
+                <h1>Projects</h1>
                 <div class="body-row">
                     {% for project in collections.reposSlice %}
                     <div class="body">
@@ -31,10 +32,11 @@ pageTitle: Josef Biehler - artist, programmer, writer - Overview
                     </div>
                     {% endfor %}
                 </div>
+                <div class="btn attention more"><a href="/projects">More ...</a></div>
             </div>
 
             <div class="list-item">
-                <h1>Drawings <div class="btn attention"><a href="/drawing">More ...</a></h1>
+                <h1>Drawings</h1>
                 <div class="body-row">
                 {% for project in collections.tweetsSlice %}
                     <div class="body">
@@ -43,6 +45,7 @@ pageTitle: Josef Biehler - artist, programmer, writer - Overview
                     </div>
                     {% endfor %}
                 </div>
+                <div class="btn attention more"><a href="/drawing">More ...</a></div>
             </div>
 
             
