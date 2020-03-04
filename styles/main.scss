@@ -94,24 +94,26 @@
     }
 }
 
-.cloud {
-    position: relative;
-    
-    #cloud_canvas {
-        display: none;
-    }
-
-    #cloud_container {
-        span {
-            cursor: pointer;
-        
-            &:hover {
-                background-color: $light;
-            }
-        }
-    }
+#cloud {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
+#cloud_container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    /*span {
+        cursor: pointer;
+        &:hover {
+            box-shadow: 0 0 10px $base;
+        }
+    }*/
+}
 
 #tag-info {
     z-index: 100;
