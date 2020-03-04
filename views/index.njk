@@ -5,7 +5,8 @@ pageTitle: Josef Biehler - artist, programmer, writer
 <script src="/assets/wordcloud2.js"></script>
 <div id="tag-info"></div>
 <div id="cloud">
-	<div id="cloud_container"></div>
+	<div id="cloud_container1"></div>
+    {% include 'tagcloud.njk' %}
     <canvas id="cloud_canvas"></canvas>
 </div>
 
@@ -33,140 +34,12 @@ pageTitle: Josef Biehler - artist, programmer, writer
 </div>
 
 <script>
-var cloudList = [
-    ["C#", 8, { text: "meine lieblingssprache" }],
-    ["JS", 7, { text: "meine lieblingssprache" }],
-    ["TS", 7, { text: "meine lieblingssprache" }],
-    ["VS Code", 6, { text: "meine lieblingssprache" }],
-    ["VS", 6, { text: "meine lieblingssprache" }],
-    ["Clip", 3, { text: "meine lieblingssprache" }],
-    ["C#", 8, { text: "meine lieblingssprache" }],
-    ["JS", 7, { text: "meine lieblingssprache" }],
-    ["TS", 7, { text: "meine lieblingssprache" }],
-    ["VS Code", 6, { text: "meine lieblingssprache" }],
-    ["VS", 6, { text: "meine lieblingssprache" }],
-    ["Clip", 3, { text: "meine lieblingssprache" }],
-    ["C#", 8, { text: "meine lieblingssprache" }],
-    ["JS", 7, { text: "meine lieblingssprache" }],
-    ["TS", 7, { text: "meine lieblingssprache" }],
-    ["VS Code", 6, { text: "meine lieblingssprache" }],
-    ["VS", 6, { text: "meine lieblingssprache" }],
-    ["Clip", 3, { text: "meine lieblingssprache" }],
-    ["C#", 8, { text: "meine lieblingssprache" }],
-    ["JS", 7, { text: "meine lieblingssprache" }],
-    ["TS", 7, { text: "meine lieblingssprache" }],
-    ["VS Code", 6, { text: "meine lieblingssprache" }],
-    ["VS", 6, { text: "meine lieblingssprache" }],
-    ["Clip", 3, { text: "meine lieblingssprache" }],
-    ["C#", 8, { text: "meine lieblingssprache" }],
-    ["JS", 7, { text: "meine lieblingssprache" }],
-    ["TS", 7, { text: "meine lieblingssprache" }],
-    ["VS Code", 6, { text: "meine lieblingssprache" }],
-    ["VS", 6, { text: "meine lieblingssprache" }],
-    ["Clip", 3, { text: "meine lieblingssprache" }],
-    ["C#", 8, { text: "meine lieblingssprache" }],
-    ["JS", 7, { text: "meine lieblingssprache" }],
-    ["TS", 7, { text: "meine lieblingssprache" }],
-    ["VS Code", 6, { text: "meine lieblingssprache" }],
-    ["VS", 6, { text: "meine lieblingssprache" }],
-    ["Clip", 3, { text: "meine lieblingssprache" }],
-    ["C#", 8, { text: "meine lieblingssprache" }],
-    ["JS", 7, { text: "meine lieblingssprache" }],
-    ["TS", 7, { text: "meine lieblingssprache" }],
-    ["VS Code", 6, { text: "meine lieblingssprache" }],
-    ["VS", 6, { text: "meine lieblingssprache" }],
-    ["Clip", 3, { text: "meine lieblingssprache" }],
-    ["C#", 8, { text: "meine lieblingssprache" }],
-    ["JS", 7, { text: "meine lieblingssprache" }],
-    ["TS", 7, { text: "meine lieblingssprache" }],
-    ["VS Code", 6, { text: "meine lieblingssprache" }],
-    ["VS", 6, { text: "meine lieblingssprache" }],
-    ["Clip", 3, { text: "meine lieblingssprache" }],
-    ["C#", 8, { text: "meine lieblingssprache" }],
-    ["JS", 7, { text: "meine lieblingssprache" }],
-    ["TS", 7, { text: "meine lieblingssprache" }],
-    ["VS Code", 6, { text: "meine lieblingssprache" }],
-    ["VS", 6, { text: "meine lieblingssprache" }],
-    ["Clip", 3, { text: "meine lieblingssprache" }],
-    ["C#", 8, { text: "meine lieblingssprache" }],
-    ["JS", 7, { text: "meine lieblingssprache" }],
-    ["TS", 7, { text: "meine lieblingssprache" }],
-    ["VS Code", 6, { text: "meine lieblingssprache" }],
-    ["VS", 6, { text: "meine lieblingssprache" }],
-    ["Clip", 3, { text: "meine lieblingssprache" }],
-    ["C#", 8, { text: "meine lieblingssprache" }],
-    ["JS", 7, { text: "meine lieblingssprache" }],
-    ["TS", 7, { text: "meine lieblingssprache" }],
-    ["VS Code", 6, { text: "meine lieblingssprache" }],
-    ["VS", 6, { text: "meine lieblingssprache" }],
-    ["Clip", 3, { text: "meine lieblingssprache" }],
-    ["C#", 8, { text: "meine lieblingssprache" }],
-    ["JS", 7, { text: "meine lieblingssprache" }],
-    ["TS", 7, { text: "meine lieblingssprache" }],
-    ["VS Code", 6, { text: "meine lieblingssprache" }],
-    ["VS", 6, { text: "meine lieblingssprache" }],
-    ["Clip", 3, { text: "meine lieblingssprache" }],
-    ["C#", 8, { text: "meine lieblingssprache" }],
-    ["JS", 7, { text: "meine lieblingssprache" }],
-    ["TS", 7, { text: "meine lieblingssprache" }],
-    ["VS Code", 6, { text: "meine lieblingssprache" }],
-    ["VS", 6, { text: "meine lieblingssprache" }],
-    ["Clip", 3, { text: "meine lieblingssprache" }],
-    ["C#", 8, { text: "meine lieblingssprache" }],
-    ["JS", 7, { text: "meine lieblingssprache" }],
-    ["TS", 7, { text: "meine lieblingssprache" }],
-    ["VS Code", 6, { text: "meine lieblingssprache" }],
-    ["VS", 6, { text: "meine lieblingssprache" }],
-    ["Clip", 3, { text: "meine lieblingssprache" }],
-    ["C#", 8, { text: "meine lieblingssprache" }],
-    ["JS", 7, { text: "meine lieblingssprache" }],
-    ["TS", 7, { text: "meine lieblingssprache" }],
-    ["VS Code", 6, { text: "meine lieblingssprache" }],
-    ["VS", 6, { text: "meine lieblingssprache" }],
-    ["Clip", 3, { text: "meine lieblingssprache" }],
-    ["C#", 8, { text: "meine lieblingssprache" }],
-    ["JS", 7, { text: "meine lieblingssprache" }],
-    ["TS", 7, { text: "meine lieblingssprache" }],
-    ["VS Code", 6, { text: "meine lieblingssprache" }],
-    ["VS", 6, { text: "meine lieblingssprache" }],
-    ["Clip", 3, { text: "meine lieblingssprache" }],
-    ["C#", 8, { text: "meine lieblingssprache" }],
-    ["JS", 7, { text: "meine lieblingssprache" }],
-    ["TS", 7, { text: "meine lieblingssprache" }],
-    ["VS Code", 6, { text: "meine lieblingssprache" }],
-    ["VS", 6, { text: "meine lieblingssprache" }],
-    ["Clip", 3, { text: "meine lieblingssprache" }],
-    ["C#", 8, { text: "meine lieblingssprache" }],
-    ["JS", 7, { text: "meine lieblingssprache" }],
-    ["TS", 7, { text: "meine lieblingssprache" }],
-    ["VS Code", 6, { text: "meine lieblingssprache" }],
-    ["VS", 6, { text: "meine lieblingssprache" }],
-    ["Clip", 3, { text: "meine lieblingssprache" }],
-    ["C#", 8, { text: "meine lieblingssprache" }],
-    ["JS", 7, { text: "meine lieblingssprache" }],
-    ["TS", 7, { text: "meine lieblingssprache" }],
-    ["VS Code", 6, { text: "meine lieblingssprache" }],
-    ["VS", 6, { text: "meine lieblingssprache" }],
-    ["Clip", 3, { text: "meine lieblingssprache" }],
-    ["C#", 8, { text: "meine lieblingssprache" }],
-    ["JS", 7, { text: "meine lieblingssprache" }],
-    ["TS", 7, { text: "meine lieblingssprache" }],
-    ["VS Code", 6, { text: "meine lieblingssprache" }],
-    ["VS", 6, { text: "meine lieblingssprache" }],
-    ["Clip", 3, { text: "meine lieblingssprache" }],
-    ["C#", 8, { text: "meine lieblingssprache" }],
-    ["JS", 7, { text: "meine lieblingssprache" }],
-    ["TS", 7, { text: "meine lieblingssprache" }],
-    ["VS Code", 6, { text: "meine lieblingssprache" }],
-    ["VS", 6, { text: "meine lieblingssprache" }],
-    ["Clip", 3, { text: "meine lieblingssprache" }],
-    
-]
+
+var cloudList = []
+
 
 var div = document.getElementById("cloud");
 var canvas = document.getElementById("cloud_canvas");
-canvas.height = div.offsetHeight;
-canvas.width  = div.offsetWidth;
 
 var options = 
 {
@@ -189,14 +62,24 @@ let drawBox = function drawBox(e, item, hidden) {
         div.textContent = item[2].text;
         div.classList.add("visible")
         var xy = e.currentTarget.getBoundingClientRect();
-        div.style.top = `${xy.top - 100}px`;
-        div.style.left = `${xy.left - 100}px`;
+
+        if (xy.left > window.innerWidth - 300) {
+            div.style.left = `${xy.left - 300}px`;
+        } else {
+            div.style.left = `${xy.left+ 100}px`;
+        }
+
+        if (xy.top > window.innerHeight - 300) {
+            div.style.top = `${xy.top - 100}px`;
+        } else {
+            div.style.top = `${xy.top}px`;
+        }
     }
 };
 
-canvas.addEventListener("wordcloudstop", () => {
+//canvas.addEventListener("wordcloudstop", () => {
          canvas.style.display="none";
-        /*document.querySelectorAll("#cloud_container span").forEach(span => {
+        document.querySelectorAll("#cloud_container span").forEach(span => {
             span.addEventListener("mouseover", (e) => {
                 drawBox(e, cloudList.find(x => x[0] === e.currentTarget.innerText))
             })
@@ -204,7 +87,23 @@ canvas.addEventListener("wordcloudstop", () => {
             span.addEventListener("mouseout", (e) => {
                 drawBox(e, null, true)
             })
-        });*/
-})
- WordCloud([document.getElementById('cloud_canvas'), document.getElementById('cloud_container')], options);
+        });
+//})
+
+
+/*fetch("/assets/cloud-data.txt").then(async response => {
+    let data = await response.text();
+    data.split("\r\n").forEach(line => {
+        var splits = line.split(";");
+        cloudList.push([splits[0], 6, { text: splits[1]}])
+    })
+    // duplicate to get enough data
+    cloudList.push(...cloudList);
+    cloudList.push(...cloudList);
+    cloudList.push(...cloudList);
+    
+    
+     WordCloud([document.getElementById('cloud_canvas'), document.getElementById('cloud_container')], options);
+})*/
+
 </script>

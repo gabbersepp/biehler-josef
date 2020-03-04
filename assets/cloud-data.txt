@@ -1,0 +1,16 @@
+C#;I am developing applications with C# since 2011. During the last years, I've done a lot to improve my skills. 
+Bugs;Beside producing new bugs, I like to analyze and fix the hardest one. There's nothing better than fixing a weird bug after doing many investigations. Every time fixing a weird bug, you have learned something new and you feel like being god!
+Performance (C#);During developing applications with C# I was often encountered with performance issues. So I learned to fix them. IL code and Assembler is something you should be familiar with when doing performance investigations.
+CIL;Years ago I started with Assembler. That helped me a lot understanding .NET IL code. That is crucial sometimes when analyzing performance issues
+ASM;Yeah I loved Assembler and I think I'm still loving it.
+OS;If you ever need a new operating system whose capabilities are very limited but is very very cool, you can take a look at my own OS, called BiehlOS. Written in Assembler!
+Performance (SQL);If you use SQL, you can do many things wrong. We also have done so much wrong that our application's performance was deteriorating slowly. That was the beginning of a very interesting and never ending journey through many technical guides regarding SQL in general and MS SQL Server.
+JS;I am loving JS because of it's simplicity. Things that have to be done very laborious in C# can be solved so easily with JS. While first I was not a JS fan, I now doing many things with JS. Especially small "microservices" or build tasks can be built extremely fast.
+TS;No JS without TS. I love C# with it's typesystem but sometimes I wish, C# would adopt the duck typing of Typescript. Very helpful!
+Aurelia;That is what we use currently at work for our frontend.
+React;React was love at first sight. Many of my private projects that require a UI are based upon React.
+Pen & Paper;Sometimes I draw directly on my Surface Tablet, sometimes I use paper. Not sure which medium I would prefer.
+Drawing;2019 I started to learn drawing cartoons. I like their simplicity which makes it easy to express an idea. Also I noticed that cartoons can also be used for headers of blog posts and so on. When drawing my images on my own, I have no problems with copyright. Very clever!
+Affinity Designer;My favorite tool for doing vector graphics on the PC. Seems to be similar to Adobe Illustrator but much cheaper.
+Clip Studio Paint;This is my favorite tool for drawing on my MS Surface Tablet. Before I owned that software, I used "Leonardo" app. But Clip is way better.
+Java;Well, I know how to code in Java. My last big Java project I worked in was some kind of marketplace.

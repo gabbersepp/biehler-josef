@@ -107,15 +107,17 @@
     height: 100%;
     overflow: hidden;
 
-    /*span {
+    span {
         cursor: pointer;
         &:hover {
             box-shadow: 0 0 10px $base;
         }
-    }*/
+    }
 }
 
 #tag-info {
+    max-width: 300px;
+    font-size: 15px;
     z-index: 100;
     position: absolute;
     top: 0;
