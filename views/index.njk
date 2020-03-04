@@ -93,7 +93,7 @@ let drawBox = function drawBox(e, item, hidden) {
 
 fetch("/assets/cloud-data.txt").then(async response => {
     let data = await response.text();
-    data.split("\r\n").forEach(line => {
+    data.split(/[\r\n]/).forEach(line => {
         var splits = line.split(";");
         cloudList.push([splits[0], 6, { text: splits[1]}])
     })
