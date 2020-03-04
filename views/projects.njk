@@ -4,5 +4,8 @@ pageTitle: Josef Biehler - Projects on Github
 tileFile: projectTile.njk
 ---
 
-{% set data = collections.repos %}
-{% include 'tiles.njk' %}
+<div class="projects">
+    <h1>My Opensource Projects</h1>
+    {% set data = collections.repos %}
+    {% include 'tiles.njk' %}
+</div>

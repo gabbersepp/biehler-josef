@@ -1,0 +1,67 @@
+@import "_config";
+
+.projects {
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    background-color: white;
+}
+
+.project-tile {
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    padding: 5px;
+    margin-bottom: 20px;
+
+    .edge {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+
+        &.upper-left {
+            border-top: 2px solid $base;
+            border-left: 2px solid $base;
+    
+            top: 0;
+            left: 0;
+        }
+    
+        &.lower-right {
+            border-right: 2px solid $base;
+            border-bottom: 2px solid $base;
+            bottom: 0;
+            right: 0;
+        }
+    }
+
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+    
+    font-size: 15px;
+
+    .title {
+        width: 100%;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        font-family: "Monda-Bold";
+        margin-bottom: 5px;
+    }
+
+    .metadata {
+        font-size: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
