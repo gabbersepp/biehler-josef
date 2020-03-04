@@ -4,5 +4,8 @@ pageTitle: Josef Biehler - Blog posts
 tileFile: devtoTile.njk
 ---
 
-{% set data = collections.blogposts %}
-{% include 'tiles.njk' %}
+<div class="blogposts">
+    <h1>Recent Blog Posts</h1>
+    {% set data = collections.blogposts %}
+    {% include 'tiles.njk' %}
+</div>

@@ -1,5 +1,6 @@
 <div class="drawing-tile tile{{entry.id}}">
-    <div class="img"><img src="{{ entry.mediaUrl }}"></div>
+    <div class="img"><img src="{{ entry.mediaUrl }}" loading="lazy"></div>
+    <div class="description">{{ entry.fullText }}</div>
 </div>
 
 <script>

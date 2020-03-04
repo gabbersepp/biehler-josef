@@ -1,18 +1,19 @@
-<div id="tile{{entry.id}}" class="flex flex--column full-height">
-    <div class="cover-image"><img src="{{entry.cover_image}}"></div>
-    <div class="title flex--1" title="{{entry.title}}">{{entry.title}}</div>
-    <div class="description flex--10">{{entry.description }}</div>
-    <div class="metadata flex--1">
+<div id="tile{{entry.id}}" class="blogpost-tile">
+    <div class="cover-image clickable"><img src="{{entry.cover_image}}" loading="lazy"></div>
+    <div class="title clickable" title="{{entry.title}}">{{entry.title}}</div>
+    <div class="description">{{entry.description }}</div>
+    <div class="metadata">
         {% for tag in entry.tag_list %}
             <div class="tag">#{{tag}}</div>
         {% endfor %}
-        <div class="comments-count">#i {{entry.comments_count}}</div>
-        <div class="reactions-count">#f {{entry.positive_reactions_count}}</div>
+        <!--<div class="comments-count">#i {{entry.comments_count}}</div>
+        <div class="reactions-count">#f {{entry.positive_reactions_count}}</div>-->
     </div>
+    <div class="btn clear"><a href="{{entry.url}}" target="_blanK">Read more</a></div>
 </div>
 
 <script>
-    document.querySelector("#tile{{entry.id}}").addEventListener("click", () => {
+    [...document.querySelectorAll("#tile{{entry.id}} .clickable")].forEach(e => e.addEventListener("click", () => {
         window.open(`{{entry.url}}`, '_blank');
-    })
+    }))
 </script>

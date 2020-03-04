@@ -4,6 +4,9 @@
 @import "codecloud";
 @import "overview";
 @import "contributions";
+@import "tiles";
+@import "drawingtiles";
+@import "devtoTile";
 
 @font-face {
     font-family: 'bj';
@@ -42,6 +45,10 @@ html, body {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+}
+
+.clickable {
+    cursor: pointer;
 }
 
 .half-content {
