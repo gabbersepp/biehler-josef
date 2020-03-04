@@ -3,6 +3,15 @@ const fs = require('fs-extra');
 const path = require('path');
 
 function transform(scssPath, cssPath) {
+    let partialDir = ""
+    cssPath.split(/[\/\\]/).forEach(x => {
+        if (x.indexOf(".css") > -1) {
+            return;
+        }
+        partialDir = partialDir + x + "/";
+        console.log(`ensure >${partialDir} `)
+        fs.ensureDirSync(partialDir);
+    });
     console.log(`Watching ${path.dirname(scssPath)}...`);
     //Encapsulate rendered css from scssPath into watchResult variable
     const watchResult = sass.renderSync({file: scssPath});

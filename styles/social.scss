@@ -1,0 +1,36 @@
+@import "_config";
+
+.social-nav {
+    background-color: $secondary;
+    display: inline-block;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    .icons {
+        font-family: "bj";
+        a {
+            text-decoration: none;
+            display: block;
+            width: 30px;
+            margin: 5px;
+        }
+        *[class*='icon'] {
+            height: 30px;
+            width: 30px;
+            margin-right: 10px;
+            color: $light;
+        }
+
+        .icon-wrench:before { content: '\e800'; }
+        .icon-phone:before { content: '\e801'; }
+        .icon-twitter:before { content: '\f099'; }
+        .icon-facebook:before { content: '\f09a'; }
+        .icon-github-circled:before { content: '\f09b'; }
+        .icon-envelope-open:before { content: '\f2b6'; }
+    }
+}

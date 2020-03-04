@@ -1,0 +1,9 @@
+<div class="drawing-small drawing{{entry.id}}">
+    <div class="img"><img src="{{ entry.mediaUrl }}"></div>
+</div>
+
+<script>
+    document.querySelector(".drawing{{entry.id}}").addEventListener("click", () => {
+        window.open(`https://twitter.com/JosefBiehler/status/{{entry.id}}`, '_blank');
+    })
+</script>

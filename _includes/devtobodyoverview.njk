@@ -1,0 +1,11 @@
+<div id="post{{entry.id}}" class="blogpost-small">
+    <div class="cover-image"><img src="{{entry.cover_image}}"></div>
+    <div class="title" title="{{entry.title}}">{{entry.title}}</div>
+    <div class="description"><span>{{entry.description }}</span></div>
+</div>
+
+<script>
+    document.querySelector("#post{{entry.id}}").addEventListener("click", () => {
+        window.open(`{{entry.url}}`, '_blank');
+    })
+</script>

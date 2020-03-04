@@ -1,0 +1,43 @@
+@import "_config";
+
+.blogposts {
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    background-color: white;
+}
+
+.blogpost-tile {
+    width: 400px;
+    height: 400px;
+
+    .cover-image {
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    
+    font-size: 15px;
+
+    .title {
+        width: 100%;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        font-family: "Monda-Bold";
+        margin-bottom: 5px;
+    }
+
+    .metadata {
+        font-size: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}

@@ -1,0 +1,15 @@
+@import "_config";
+
+.tiles {
+    width: 100%;
+
+    justify-content: space-around;
+    display: flex;
+    flex-wrap: wrap;
+
+    .nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+}

@@ -8,7 +8,8 @@
     "11ty-serve": "cross-env SASSWATCH=1 eleventy --serve",
     "upload": "node ./build/upload.js",
     "twitter": "node ./build/tweets.js",
-    "zip": "node ./build/zip.js"
+    "zip": "node ./build/zip.js",
+    "contributions": "node ./build/contribution.js"
   },
   "repository": {
     "type": "git",
@@ -24,7 +25,8 @@
     "request": "2.88.2",
     "sass": "1.25.0",
     "tweet-downloader": "1.0.2",
-    "twitter-lite": "0.9.4"
+    "twitter-lite": "0.9.4",
+    "wordcloud": "^1.1.1"
   },
   "dependencies": {}
 }

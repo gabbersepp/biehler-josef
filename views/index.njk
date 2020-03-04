@@ -2,19 +2,77 @@
 layout: base
 pageTitle: Josef Biehler - artist, programmer, writer
 ---
+<script src="/assets/wordcloud2.js"></script>
+<div id="tag-info"></div>
 
-<div id="intro">    
-    <div id="image">
-        <img src="/assets/me.jpg">
+<div class="half-content main">
+<div class="portfolio"><span>Port</span><span>folio</span></div>
+    <div class="intro">    
+        <div class="image">
+            <img src="/assets/me2.jpg">
+        </div>
+        <div class="text">
+            <div class="first-line">Hi I am</div>
+            <h1 class="heading">Josef Biehler</h1>
+            <p>a large (1,95m) coding & drawing enthusiast that likes all type of coding and drawing cartoons.</p>
+            <p>Feel free to continue here and get an insight into my work.</p>
+        </div>
     </div>
-    <div id="intro-text">
-        <p>Hello,</p>
-        <p>I am a large (1,95m) coding & drawing enthusiast that likes all type of coding and drawing cartoons.</p>
-        <p>Feel free to continue here and get an insight into my work.</p>
+    <div class="content">
+        <!--<div class="cloud">
+            <div id="cloud_container"></div>
+            <canvas id="cloud_canvas"></canvas>
+        </div>-->
+        <div class="call-to">
+                    <div class="btn attention"><a href="/overview/">Continue reading</a></div>
+            <div class="btn"><a href="/codecloud/">My code in the cloud</a></div>
+            <div class="btn"><a href="/contribution">My Github contributions</a></div>
+        </div>
     </div>
 </div>
 
 <script>
+var cloudList = [
+    ["C#", 8, { text: "meine lieblingssprache" }],
+    ["JS", 7, { text: "und eine weitere blabla" }],
+    ["TS", 7, { text: "und eine weitere blabla" }],
+    ["VS Code", 6, { text: "und eine weitere blabla" }],
+    ["VS", 6, { text: "und eine weitere blabla" }],
+    ["Clip", 3, { text: "und eine weitere blabla" }]
+]
+let drawBox = function drawBox(e, item, hidden) {
+    const div = document.querySelector("#tag-info");
+
+    if (hidden) {
+        div.classList.remove("visible")
+    } else {
+        div.textContent = item[2].text;
+        div.classList.add("visible")
+        var xy = e.currentTarget.getBoundingClientRect();
+        div.style.top = `${xy.top - 100}px`;
+        div.style.left = `${xy.left - 100}px`;
+    }
+};
+
+ WordCloud([
+    document.getElementById('cloud_canvas'),
+    document.getElementById('cloud_container'),
+  ], { list: cloudList, fontFamily: "", minSize: "10px", 
+    color: "#6a89cc", gridSize: 18, shrinkToFit: true, rotateRatio: 1, shuffle: true,drawMask: false, weightFactor: 3});
+
+    setTimeout(() => {
+        document.querySelectorAll("#cloud_container span").forEach(span => {
+            span.addEventListener("mouseover", (e) => {
+                drawBox(e, cloudList.find(x => x[0] === e.currentTarget.innerText))
+            })
+
+            span.addEventListener("mouseout", (e) => {
+                drawBox(e, null, true)
+            })
+        });
+    }, 1000)
+
+
     document.getElementById("intro").addEventListener("click", () => {
         document.location = "overview/index.html"
     })

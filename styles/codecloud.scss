@@ -1,0 +1,26 @@
+@import "_config";
+
+.content.codecloud {
+    background-color: white;
+    height: 100%;
+    
+    h1 {
+        text-align: center;
+    }
+
+    img {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+    .nav {
+        div:nth-of-type(1) {
+            float: left;
+        }
+        div:nth-of-type(2) {
+            float: right;
+        }
+        
+    }
+}

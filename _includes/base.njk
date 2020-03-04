@@ -9,34 +9,25 @@
     <link rel="stylesheet" href="/index.css">
     
     <title>{{ pageTitle }}</title>
+
+    <meta property="og:title" content="Portfolio - Biehler Josef"/>
+    <meta property="og:description" content="My journey through areas of art, coding and more"/>
+    <meta property="og:image" content="https://biehler-josef.de/assets/twittercard.jpg"/>
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:description" content="My journey through areas of art, coding and more" />
+    <meta name="twitter:title" content="Portfolio - Biehler Josef" />
+    <meta name="twitter:site" content="@JosefBiehler" />
+    <meta name="twitter:image" content="https://biehler-josef.de/assets/twittercard.jpg" />
+
 </head>
 <body>
 
-    {% if page.url !== "/" %}
     <header>
-            <div class="nav">
-                <div class="left">
-                    <span class="icons">
-                    <a href="https://www.facebook.com/jodekadev" target="_blank"><i class="icon-facebook"></i></a>
-                    <a href="https://twitter.com/JosefBiehler" target="_blank"><i class="icon-twitter"></i></a>
-                    <a href="https://github.com/gabbersepp/" target="_blank"><i class="icon-github-circled"></i></a>
-                    <a href="mailto:support@biehler-josef.de"><i class="icon-envelope-open"></i></a>
-                    </span>
-                </div>
-                <div class="right"></div>
-            </div>
-        <h1>{{ pageTitle }}</h1>
-        <!--<div class="hr"></div>-->
+    {% include 'social.njk' %}
     </header>
-    
-    <div id="main-content">
-    {% endif %}
 
-        {{ content | safe }}
-    
-    {% if page.url === "/" %}
-    </div>
-    {% endif %}
+     {{ content | safe }}
     
     <footer>
     Josef Biehler | 015125391868 | gabbersepp@googlemail.com
