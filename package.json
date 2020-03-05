@@ -26,7 +26,7 @@
     "sass": "1.25.0",
     "tweet-downloader": "1.0.2",
     "twitter-lite": "0.9.4",
-    "wordcloud": "^1.1.1"
+    "wordcloud": "1.1.1"
   },
   "dependencies": {}
 }
