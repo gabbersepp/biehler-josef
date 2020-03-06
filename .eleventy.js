@@ -5,16 +5,21 @@ const devto = require("./build/devto");
 
 function filterTweets(hashtags) {
   const tweetsStr = fs.readFileSync("./data/tweets.json").toString();
-  const tweets = JSON.parse(tweetsStr).filter(tweet => {
+  const tweets = JSON.parse(tweetsStr).filter(tweet => {  
     const text = tweet.fullText.toLowerCase();
-    return hashtags.some(ht => {
+    return tweet.localPath && hashtags.some(ht => {
       return text.indexOf(ht) > -1 || tweet.hashtags.some(tag => {
         return tag.indexOf(ht) > -1
       });
     });
   });
   
-  return tweets;
+  return tweets.map(tweet => {
+    if (tweet.localPath) {
+      tweet.localPath = "/" + tweet.localPath;
+    }
+    return tweet;
+  });
 }
 
 module.exports = function(eleventyConfig) {

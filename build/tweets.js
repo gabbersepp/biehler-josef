@@ -1,6 +1,6 @@
 const tweetDownloader = require("tweet-downloader");
 
-async function getLatestEarningsPost() {
+async function getLatestTweets() {
     let tweets = tweetDownloader.readTweets("./data/tweets.json");
     
     let maxId = BigInt(1);
@@ -21,7 +21,7 @@ async function getLatestEarningsPost() {
     return tweets;
 }
 
-getLatestEarningsPost().catch(e => {
+getLatestTweets().catch(e => {
     console.error(e);
     throw e;
 });
