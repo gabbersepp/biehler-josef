@@ -41,6 +41,9 @@ var cloudList = []
 var div = document.getElementById("cloud");
 var canvas = document.getElementById("cloud_canvas");
 
+canvas.height = div.offsetHeight;
+canvas.width  = div.offsetWidth;
+
 var options = 
 {
     backgroundColor: "#eef1f9",
@@ -103,7 +106,7 @@ fetch("/assets/cloud-data.txt").then(async response => {
     cloudList.push(...cloudList);
     
     
-     //WordCloud([document.getElementById('cloud_canvas'), document.getElementById('cloud_container')], options);
+    //WordCloud([document.getElementById('cloud_canvas'), document.getElementById('cloud_container')], options);
 })
 
 </script>
