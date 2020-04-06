@@ -14,20 +14,18 @@ function getRequest(url, opts) {
     });
 }
 
-async function doFetch(gql){
+function doFetch(gql){
   const headers = {
     'Content-type': 'application/json',
     'Authorization': 'token ' + ghToken,
     "User-Agent": "node.js"
   }
 
-  let response = await getRequest("https://api.github.com/graphql", {
+  return getRequest("https://api.github.com/graphql", {
     method: "POST",
     headers: headers,
     body:  JSON.stringify(gql)
-  })
-
-  return response
+  });
 }
 
 
@@ -88,7 +86,14 @@ async function getContributionDetails(login, repo) {
 }
 
 async function getAllContributions() {
-    let contib = await getContributions("gabbersepp")
+  let contib;
+
+    try {
+      contib = await getContributions("gabbersepp")
+    } catch (e) {
+      throw e;
+    }
+
     const details = [];
 
       if (contib.length > 0) {
