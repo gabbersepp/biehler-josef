@@ -1,0 +1,15 @@
+@media(max-width: $tablet-landscape-max-width) {
+    .content.overview {
+        .list .list-item .body-row {
+            flex-direction: column;
+        }
+    }
+}
+
+@media(max-width: $handy-max-width) {
+    .content.overview {
+        .list {
+            width: 95%;
+        }
+    }
+}

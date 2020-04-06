@@ -10,3 +10,9 @@
         margin: 0;
     }
 }
+
+@media(max-width: $small-handy-max-width) {
+    html, body {
+        font-size: 15px;
+    }
+}

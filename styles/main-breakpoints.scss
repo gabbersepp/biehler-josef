@@ -1,0 +1,15 @@
+@media(max-width: $handy-max-width) {
+    .half-content.main {
+        .intro {
+            flex-direction: column;
+        }
+
+        .call-to {
+            width: 90%;
+        }
+    }
+
+    footer {
+        font-size: $min-size;
+    }
+}
