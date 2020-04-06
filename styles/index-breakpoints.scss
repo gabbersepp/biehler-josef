@@ -16,3 +16,9 @@
         font-size: 15px;
     }
 }
+
+@media(max-width: $tablet-portrait-max-width) {
+    .section {
+        padding-top: 60px;
+    }
+}

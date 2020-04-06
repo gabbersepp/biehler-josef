@@ -13,3 +13,9 @@
         font-size: $min-size;
     }
 }
+
+@media(max-width: $tablet-portrait-max-width) {
+    .code-in-cloud {
+        display: none;
+    }
+}
