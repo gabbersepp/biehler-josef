@@ -23,7 +23,7 @@
     "cross-env": "7.0.2",
     "fs-extra": "8.1.0",
     "request": "2.88.2",
-    "sass": "1.26.2",
+    "sass": "1.26.3",
     "tweet-downloader": "1.0.2",
     "twitter-lite": "0.9.4",
     "wordcloud": "1.1.1"
