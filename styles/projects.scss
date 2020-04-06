@@ -9,17 +9,17 @@
 }
 
 .project-tile {
-    width: 400px;
-    height: 400px;
+    width: $min-size * 40;
+    height: $min-size * 40;
     overflow: hidden;
     position: relative;
-    padding: 5px;
-    margin-bottom: 20px;
+    padding: $min-size * 0.5;
+    margin-bottom: $min-size * 2;
 
     .edge {
         position: absolute;
-        width: 30px;
-        height: 30px;
+        width: $min-size * 3;
+        height: $min-size * 3;
 
         &.upper-left {
             border-top: 2px solid $base;
@@ -43,7 +43,7 @@
         height: auto;
     }
     
-    font-size: 15px;
+    font-size: $min-size * 1.5;
 
     .title {
         width: 100%;
@@ -51,11 +51,11 @@
         white-space: nowrap;
         overflow: hidden;
         font-family: "Monda-Bold";
-        margin-bottom: 5px;
+        margin-bottom: $min-size * 0.5;
     }
 
     .metadata {
-        font-size: 10px;
+        font-size: $min-size;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;

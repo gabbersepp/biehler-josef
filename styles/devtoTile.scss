@@ -3,14 +3,14 @@
 .blogposts {
     h1 {
         text-align: center;
-        margin-bottom: 20px;
+        margin-bottom: $min-size * 2;
     }
     background-color: white;
 }
 
 .blogpost-tile {
-    width: 400px;
-    height: 400px;
+    width: $min-size * 40;
+    height: $min-size * 40;
 
     .cover-image {
         img {
@@ -19,7 +19,7 @@
         }
     }
     
-    font-size: 15px;
+    font-size: $min-size * 1.5;
 
     .title {
         width: 100%;
@@ -27,11 +27,11 @@
         white-space: nowrap;
         overflow: hidden;
         font-family: "Monda-Bold";
-        margin-bottom: 5px;
+        margin-bottom: $min-size;
     }
 
     .metadata {
-        font-size: 10px;
+        font-size: $min-size * 2;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;

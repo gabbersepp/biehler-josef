@@ -1,9 +1,9 @@
 @import "_config";
 
 .overview {
-    padding-top: 50px;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-top: $min-size * 5;
+    padding-left: $min-size * 10;
+    padding-right: $min-size * 10;
     background-color: white;
 
     .nav {
@@ -13,31 +13,31 @@
     }
 
     .list {
-        width: calc(300px * 3 + 40px);
+        width: calc(#{$min-size} * 30 * 3 + #{$min-size} * 4);
         margin-left: auto;
         margin-right: auto;
 
         .list-item {
-            margin-bottom: 50px;
+            margin-bottom: $min-size * 5;
             position: relative;
 
             .more {
                 transform: rotate(90deg);
                 position: absolute;
-                top: 150px;
-                right: -200px;
+                top: $min-size * 15;
+                right: -($min-size * 20);
             }
             .body ~ .body {
-                margin-left: 30px;
+                margin-left: $min-size * 3;
             }
             h1 {
                 text-align: center;
-                font-size: 30px;
-                margin-bottom: 10px;
+                font-size: $min-size * 3;
+                margin-bottom: $min-size;
                 position: relative;
 
                 .btn {
-                    font-size: 20px;
+                    font-size: $min-size * 2;
                     position: absolute;
                     right: 0;
                     top: 0;
@@ -46,8 +46,8 @@
 
             .body {
                 //box-shadow: 0 0 5px $base;
-                width: 300px;
-                height: 300px;
+                width: $min-size * 30;
+                height: $min-size * 30;
                 overflow: hidden;
             }
             
@@ -77,7 +77,7 @@
         }
     }
     
-    font-size: 15px;
+    font-size: $min-size * 1.5;
 
     .title {
         width: 100%;
@@ -85,12 +85,12 @@
         white-space: nowrap;
         overflow: hidden;
         font-family: "Monda-Bold";
-        margin-bottom: 5px;
+        margin-bottom: $min-size * 0.5;
     }
 }
 
 .project-small {
-    font-size: 15px;
+    font-size: $min-size * 1.5;
 
     .name {
         width: 100%;
@@ -98,7 +98,7 @@
         white-space: nowrap;
         overflow: hidden;
         font-family: "Monda-Bold";
-        margin-bottom: 5px;
+        margin-bottom: $min-size * 0.5;
     }
 
     .description {

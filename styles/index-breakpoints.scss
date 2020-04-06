@@ -1,0 +1,12 @@
+@media(max-width: $desktop-max-width) {
+    .half-content {
+        width: 70%;
+    }
+}
+
+@media(max-width: $tablet-landscape-max-width) {
+    .half-content {
+        width: 100%;
+        margin: 0;
+    }
+}

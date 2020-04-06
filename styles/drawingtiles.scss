@@ -9,8 +9,8 @@
 
 .drawing-tile {
     cursor: pointer;
-    width: 400px;
-    height: 400px;
+    width: $min-size * 40;
+    height: $min-size * 40;
 
     display: flex;
     justify-content: center;
@@ -18,14 +18,14 @@
     flex-direction: column;
 
     img {
-        max-width: 380px;
-        max-height: 380px;
+        max-width: $min-size * 38;
+        max-height: $min-size * 38;
     }
 
     .description {
         width: 100%;
-        padding: 5px;
-        font-size: 15px;
+        padding: $min-size;
+        font-size: $min-size * 1.5;
         text-overflow: ellipsis;
         overflow: hidden;
         white-space: nowrap;
