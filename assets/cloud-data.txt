@@ -14,3 +14,4 @@ Drawing;2019 I started to learn drawing cartoons. I like their simplicity which 
 Affinity Designer;My favorite tool for doing vector graphics on the PC. Seems to be similar to Adobe Illustrator but much cheaper.
 Clip Studio Paint;This is my favorite tool for drawing on my MS Surface Tablet. Before I owned that software, I used "Leonardo" app. But Clip is way better.
 Java;Well, I know how to code in Java. My last big Java project I worked in was some kind of marketplace.
+Big O;Know the difference between n^3 and nlogn. You don't? Then take a look at "Big O".
