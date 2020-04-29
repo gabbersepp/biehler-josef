@@ -13,7 +13,7 @@
 </div>
 
 <script>
-    [...document.querySelectorAll("#tile{{entry.id}} .clickable")].forEach(e => e.addEventListener("click", () => {
+    [...document.querySelectorAll("#tile{{entry.id}}")].forEach(e => e.addEventListener("click", () => {
         window.open(`{{entry.url}}`, '_blank');
     }))
 </script>

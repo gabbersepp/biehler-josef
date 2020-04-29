@@ -11,6 +11,7 @@
 .blogpost-tile {
     width: $min-size * 40;
     height: $min-size * 40;
+    cursor: pointer;
 
     .cover-image {
         img {

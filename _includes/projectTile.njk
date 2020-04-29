@@ -10,3 +10,9 @@
     </div>
     <div class="edge lower-right"></div>
 </div>
+
+<script>
+    document.querySelector("#tile{{entry.id}}").addEventListener("click", () => {
+        window.open(`{{entry.url}}`, '_blank');
+    })
+</script>
