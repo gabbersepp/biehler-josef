@@ -19,7 +19,7 @@
   "license": "MIT",
   "devDependencies": {
     "@11ty/eleventy": "0.10.0",
-    "archiver": "3.1.1",
+    "archiver": "4.0.1",
     "cross-env": "7.0.2",
     "fs-extra": "9.0.0",
     "request": "2.88.2",
