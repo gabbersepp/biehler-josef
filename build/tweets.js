@@ -8,11 +8,11 @@ async function getLatestTweets() {
         maxId = tweets.map(x => x.id).reduce((x, y) => x > y ? x : y);
     }
     
-    const jbTweets = await tweetDownloader.getLatestEarningsPost(maxId.toString(), "JosefBiehler", "./data/images",
-        process.env.TWTR_CKEY, process.env.TWTR_CSECRET, process.env.TWTR_ATOKEN, process.env.TWTR_ASECRET);
+    const jbTweets = await tweetDownloader.getLatestTweets(maxId.toString(), "JosefBiehler", "./data/images",
+        process.env.TWTR_CKEY, process.env.TWTR_CSECRET, process.env.TWTR_ATOKEN, process.env.TWTR_ASECRET, 3200);
 
-    const kackDevTweets = await tweetDownloader.getLatestEarningsPost(maxId.toString(), "KackDev", "./data/images",
-        process.env.TWTR_CKEY, process.env.TWTR_CSECRET, process.env.TWTR_ATOKEN, process.env.TWTR_ASECRET);
+    const kackDevTweets = await tweetDownloader.getLatestTweets(maxId.toString(), "KackDev", "./data/images",
+        process.env.TWTR_CKEY, process.env.TWTR_CSECRET, process.env.TWTR_ATOKEN, process.env.TWTR_ASECRET, 3200);
 
     tweets = [...jbTweets, ...kackDevTweets];
 

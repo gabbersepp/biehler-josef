@@ -3,9 +3,14 @@ const sass = require("./build/sass-process");
 const readRepositories = require("./build/github.js");
 const devto = require("./build/devto");
 
-function filterTweets(hashtags) {
+function readTweets() {
   const tweetsStr = fs.readFileSync("./data/tweets.json").toString();
-  const tweets = JSON.parse(tweetsStr).filter(tweet => {  
+  const tweets = JSON.parse(tweetsStr);
+  return tweets;
+}
+
+function filterTweets(hashtags) {
+  const tweets = readTweets().filter(tweet => {  
     const text = tweet.fullText.toLowerCase();
     return tweet.localPath && hashtags.some(ht => {
       return text.indexOf(ht) > -1 || tweet.hashtags.some(tag => {
@@ -23,9 +28,23 @@ function filterTweets(hashtags) {
 }
 
 async function extendArticles(articlesPromise) {
-  var articles = await articlesPromise;
+  const articles = await articlesPromise;
+  const tweets = readTweets();
+  const devtoToTweet = JSON.parse(fs.readFileSync("./data/devto-to-tweet.json").toString());
   articles.forEach(article => {
     article.devReactions = article.comments_count + article.public_reactions_count + article.page_views_count;
+    
+    article.twitterLikes = 0;
+    article.shares = 0; 
+
+    var tweetDevTo = devtoToTweet.find(x => x.articleId == article.id);
+    if (tweetDevTo) {
+      var tweet = tweets.find(t => t.id == tweetDevTo.tweetId);
+      if (tweet) {
+        article.twitterLikes = tweet.likeCount;
+        article.shares = tweet.retweetCount; 
+      }
+    }
   })
   return articles;
 }
