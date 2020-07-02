@@ -22,6 +22,14 @@ function filterTweets(hashtags) {
   });
 }
 
+async function extendArticles(articlesPromise) {
+  var articles = await articlesPromise;
+  articles.forEach(article => {
+    article.devReactions = article.comments_count + article.public_reactions_count + article.page_views_count;
+  })
+  return articles;
+}
+
 module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter('markdown', function(value) {
       let markdown = require('markdown-it')({
@@ -30,7 +38,7 @@ module.exports = function(eleventyConfig) {
       return markdown.render(value);
   });
 
-  const devtoPromise = devto.getAll();
+  const devtoPromise = extendArticles(devto.getAll());
   const githubprojectpromise = readRepositories();
   const drawings = filterTweets(["digitalart", "comic", "cartoon", "draw", "drawing"]);
 
