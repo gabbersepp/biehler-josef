@@ -4,6 +4,14 @@
             flex-direction: column;
         }
     }
+
+    .blogpost-small {
+        height: unset;
+
+        .description {
+            padding-bottom: 20px;
+        }
+    }
 }
 
 @media(max-width: $handy-max-width) {

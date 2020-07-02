@@ -70,6 +70,9 @@
 }
 
 .blogpost-small {
+    position: relative;
+    height: 100%;
+
     .cover-image {
         img {
             width: 100%;
@@ -86,6 +89,45 @@
         overflow: hidden;
         font-family: "Monda-Bold";
         margin-bottom: $min-size * 0.5;
+    }
+
+    .metadata {
+        padding-right: 5px;
+        height: 24px;
+        position: absolute;
+        right: 0;
+        bottom: 10px;
+        background-color: white;
+        border-radius: 20%;
+
+        .data {
+            display: inline-block;
+            padding: 2px;
+
+            &:hover {
+                box-shadow: 0 0 10px black;
+                border-radius: 20%;
+            }
+            
+            .icon {
+                background-size: contain;
+                width: 20px;
+                height: 20px;
+                float: left;
+
+                &.heart {
+                    background-image: url("/assets/heart.png");
+                }
+    
+                &.thumbsup {
+                    background-image: url("/assets/thumbsup.png");
+                }
+
+                &.share {
+                    background-image: url("/assets/share.png");
+                }
+            }
+        }
     }
 }
 
