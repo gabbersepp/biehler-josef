@@ -2,6 +2,11 @@
     <div class="cover-image"><img src="{{entry.cover_image}}"></div>
     <div class="title" title="{{entry.title}}">{{entry.title}}</div>
     <div class="description"><span>{{entry.description }}</span></div>
+    <div class="metadata">
+        <div class="data" title="Likes from Twitter"><div class="icon heart"></div>{{ entry.twitterLikes }}</div>
+        <div class="data" title="Public reactions &amp; Views from Dev.to"><div class="icon thumbsup"></div>{{ entry.devReactions }}</div>
+        <div class="data" title="#Shares from Twitter"><div class="icon share"></div>{{ entry.shares }}</div>
+    </div>
 </div>
 
 <script>

@@ -3,11 +3,16 @@
     <div class="title clickable" title="{{entry.title}}">{{entry.title}}</div>
     <div class="description">{{entry.description }}</div>
     <div class="metadata">
+        <div class="tags">
         {% for tag in entry.tag_list %}
             <div class="tag">#{{tag}}</div>
         {% endfor %}
-        <!--<div class="comments-count">#i {{entry.comments_count}}</div>
-        <div class="reactions-count">#f {{entry.positive_reactions_count}}</div>-->
+        </div>
+        <div class="measures">
+            <div class="data" title="Likes from Twitter"><div class="icon heart"></div>{{ entry.twitterLikes }}</div>
+            <div class="data" title="Public reactions &amp; Views from Dev.to"><div class="icon thumbsup"></div>{{ entry.devReactions }}</div>
+            <div class="data" title="#Shares from Twitter"><div class="icon share"></div>{{ entry.shares }}</div>
+        </div>
     </div>
     <div class="btn clear"><a href="{{entry.url}}" target="_blanK">Read more</a></div>
 </div>

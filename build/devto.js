@@ -9,12 +9,11 @@ async function getAll() {
         currentResult = await getPage(page++);
         articles = [...articles, ...currentResult.data]; 
     }
-
     return articles;
 }
 
 async function getPage(page) {
-    const articles = await getRequest(`https://dev.to/api/articles?username=gabbersepp&page=${page}`);
+    const articles = await getRequest(`https://dev.to/api/articles/me/published?page=${page}`);
     
     return {
         data: articles,
@@ -25,7 +24,7 @@ async function getPage(page) {
 
 function getRequest(url) {
     return new Promise((resolve, reject) => {
-        request(url, (error, response, body) => {
+        request(url, {headers: {"api-key": process.env.DEVTO_TOKEN}}, (error, response, body) => {
             if (error) {
                 reject(error);
             } else {
