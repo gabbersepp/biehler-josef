@@ -9,7 +9,8 @@
     "upload": "node ./build/upload.js",
     "twitter": "node ./build/tweets.js",
     "zip": "node ./build/zip.js",
-    "contributions": "node ./build/contribution.js"
+    "contributions": "node ./build/contribution.js",
+    "githubcloud": "node ./build/githubcloud.js"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,7 @@
     "archiver": "4.0.1",
     "cross-env": "7.0.2",
     "fs-extra": "9.0.1",
+    "github-code-cloud": "^1.2.0",
     "request": "2.88.2",
     "sass": "1.26.9",
     "tweet-downloader": "1.1.1",
