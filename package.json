@@ -4,11 +4,9 @@
   "description": "This repository will contain the stuff for my personal static website.",
   "main": "index.js",
   "scripts": {
-    "11ty": "eleventy",
-    "11ty-serve": "cross-env SASSWATCH=1 eleventy --serve",
-    "upload": "node ./build/upload.js",
+    "11ty": "eleventy --config=app/.eleventy.js",
+    "11ty-serve": "cross-env SASSWATCH=1 eleventy --serve --config=app/.eleventy.js",
     "twitter": "node ./build/tweets.js",
-    "zip": "node ./build/zip.js",
     "contributions": "node ./build/contribution.js",
     "githubcloud": "node ./build/githubcloud.js"
   },

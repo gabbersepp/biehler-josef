@@ -1,10 +1,10 @@
 const fs = require("fs-extra");
-const sass = require("./build/sass-process");
-const readRepositories = require("./build/github.js");
-const devto = require("./build/devto");
+const sass = require("build/sass-process");
+const readRepositories = require("build/github.js");
+const devto = require("build/devto");
 
 function readTweets() {
-  const tweetsStr = fs.readFileSync("./data/tweets.json").toString();
+  const tweetsStr = fs.readFileSync("app/data/tweets.json").toString();
   const tweets = JSON.parse(tweetsStr);
   return tweets;
 }
@@ -30,7 +30,7 @@ function filterTweets(hashtags) {
 async function extendArticles(articlesPromise) {
   const articles = await articlesPromise;
   const tweets = readTweets();
-  const devtoToTweet = JSON.parse(fs.readFileSync("./data/devto-to-tweet.json").toString());
+  const devtoToTweet = JSON.parse(fs.readFileSync("app/data/devto-to-tweet.json").toString());
   articles.forEach(article => {
     article.devReactions = article.comments_count + article.public_reactions_count + article.page_views_count;
     
@@ -71,17 +71,17 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addCollection("postsSlice", async () => (await devtoPromise).slice(0, 3));
 
   eleventyConfig.addPassthroughCopy({
-    "./assets": "assets",
-    "./data/images": "data/images",
-    "./node_modules/wordcloud/src/wordcloud2.js": "assets/wordcloud2.js"
+    "app/assets": "assets",
+    "app/data/images": "data/images",
+    "app/node_modules/wordcloud/src/wordcloud2.js": "assets/wordcloud2.js"
   });
 
-  sass('./styles/index.scss', './dist/index.css');
+  sass('app/styles/index.scss', 'app/dist/index.css');
 
   return {
     dir: {
-      input: "./views",
-      output: "./dist",
+      input: "app/views",
+      output: "app/dist",
       includes: "../_includes"
     }
   }

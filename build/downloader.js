@@ -5,7 +5,7 @@ function download(twitterUrl, id) {
     const ext = twitterUrl.split("\.").reverse()[0];
    
     return new Promise(resolve => {
-        const path = `/data/images/${id}.${ext}`;
+        const path = `app/data/images/${id}.${ext}`;
         const stream = fs.createWriteStream(`.${path}`);
         request(twitterUrl).pipe(stream);
         stream.on("finish", () => resolve(path));

@@ -103,7 +103,7 @@ async function getAllContributions() {
         }
       }
 
-      fs.writeFileSync("./assets/contrib.json", JSON.stringify(details));
+      fs.writeFileSync("app/assets/contrib.json", JSON.stringify(details));
 }
 
 getAllContributions();
