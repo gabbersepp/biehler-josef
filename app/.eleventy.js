@@ -1,7 +1,7 @@
 const fs = require("fs-extra");
-const sass = require("build/sass-process");
-const readRepositories = require("build/github.js");
-const devto = require("build/devto");
+const sass = require("../build/sass-process.js");
+const readRepositories = require("../build/github.js");
+const devto = require("../build/devto");
 
 function readTweets() {
   const tweetsStr = fs.readFileSync("app/data/tweets.json").toString();
