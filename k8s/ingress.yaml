@@ -8,6 +8,7 @@ spec:
   rules:
   - host: biehler-josef.de
     http:
+      paths:
       - path: /
         backend:
           serviceName: biehlerjosef-service
