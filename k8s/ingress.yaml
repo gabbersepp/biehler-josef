@@ -13,3 +13,10 @@ spec:
         backend:
           serviceName: biehlerjosef-service
           servicePort: 80
+  - host: www.biehler-josef.de
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: biehlerjosef-service
+          servicePort: 80
