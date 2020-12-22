@@ -1,0 +1,13 @@
+apiVersion: extensions/v1beta1
+metadata:
+  name: biehlerjosef-ingress
+  annotations:
+    kubernetes.io/ingress.class: nginx
+spec:
+  rules:
+  - host: biehler-josef.de
+    http:
+      - path: /
+        backend:
+          serviceName: biehlerjosef-service
+          servicePort: 80

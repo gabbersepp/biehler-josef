@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: biehlerjosef
+spec:
+  selector:
+    matchLabels:
+      app: biehlerjosef
+  template:
+    metadata:
+      labels:
+        app: biehlerjosef
+    spec:
+      containers:
+      - name: biehlerjosef
+        image: gabbersepp/biehlerjosef
+        ports:
+        - containerPort: 80
