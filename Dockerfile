@@ -1,4 +1,4 @@
-FROM node:12.18.1 as node
+FROM node:12.20.2 as node
 
 RUN mkdir biehlerjosef
 COPY "./app" "./biehlerjosef/app"
