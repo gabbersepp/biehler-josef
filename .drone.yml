@@ -10,4 +10,4 @@ steps:
 - name: twitter
   image: node:10
   commands:
-    - npm run twitter
+    - npm run twitter 
