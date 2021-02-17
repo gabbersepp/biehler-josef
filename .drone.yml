@@ -6,7 +6,7 @@ steps:
   image: node:10
   commands:
     - set -e
-    - npm run install
+    - npm install
 - name: twitter
   image: node:10
   commands:
