@@ -106,4 +106,7 @@ async function getAllContributions() {
       fs.writeFileSync("app/assets/contrib.json", JSON.stringify(details));
 }
 
-getAllContributions();
+getAllContributions().catch(e => {
+  console.error(e);
+  process.exit(-1);
+});

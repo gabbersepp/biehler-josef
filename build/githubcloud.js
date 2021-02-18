@@ -14,4 +14,7 @@ async function run() {
     fs.copyFileSync("temp/cloud/export/img.png", "app/assets/codecloud.png");
 }
 
-run();
+run().catch(e => {
+    console.error(e);
+    process.exit(-1);
+});
