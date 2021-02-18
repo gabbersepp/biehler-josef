@@ -20,6 +20,9 @@ steps:
       from_secret: TWTR_CKEY
     TWTR_CSECRET:
       from_secret: TWTR_CSECRET
+  when:
+    branch:
+    - master
 - name: contributions
   image: node:10
   commands:
@@ -27,6 +30,9 @@ steps:
   environment:
     GITHUB_TOKEN:
       from_secret: GITHUB_TOKEN
+  when:
+    branch:
+    - master
 - name: githubcloud
   image: buildkite/puppeteer
   commands:
@@ -34,3 +40,6 @@ steps:
   environment:
      GITHUB_TOKEN:
       from_secret: GITHUB_TOKEN
+  when:
+    branch:
+    - master
