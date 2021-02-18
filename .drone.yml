@@ -18,3 +18,5 @@ steps:
       from_secret: TWTR_ATOKEN
     TWTR_CKEY:
       from_secret: TWTR_CKEY
+    TWTR_CSECRET:
+      from_secret: TWTR_CSECRET
