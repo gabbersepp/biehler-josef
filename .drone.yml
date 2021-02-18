@@ -28,7 +28,7 @@ steps:
     GITHUB_TOKEN:
       from_secret: GITHUB_TOKEN
 - name: githubcloud
-  image: node:10
+  image: buildkite/puppeteer
   commands:
     - npm run githubcloud
   environment:
