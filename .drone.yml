@@ -20,3 +20,10 @@ steps:
       from_secret: TWTR_CKEY
     TWTR_CSECRET:
       from_secret: TWTR_CSECRET
+- name: contributions
+  image: node:10
+  commands:
+    - npm run contributions
+  environment:
+    GITHUB_TOKEN:
+      from_secret: GITHUB_TOKEN
