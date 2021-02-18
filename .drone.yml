@@ -27,3 +27,10 @@ steps:
   environment:
     GITHUB_TOKEN:
       from_secret: GITHUB_TOKEN
+- name: githubcloud
+  image: node:10
+  commands:
+    - npm run githubcloud
+  environment:
+     GITHUB_TOKEN:
+      from_secret: GITHUB_TOKEN
