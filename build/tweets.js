@@ -32,6 +32,5 @@ async function getSpecificTweets() {
 getLatestTweets()
 .then(getSpecificTweets)
 .catch(e => {
-    console.error(e);
-    throw e;
+    process.exit(-1)
 });

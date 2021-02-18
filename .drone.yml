@@ -11,3 +11,10 @@ steps:
   image: node:10
   commands:
     - npm run twitter 
+  environment:
+    TWTR_ASECRET:
+      from_secret: TWTR_ASECRET
+    TWTR_ATOKEN:
+      from_secret: TWTR_ATOKEN
+    TWTR_CKEY:
+      from_secret: TWTR_CKEY
