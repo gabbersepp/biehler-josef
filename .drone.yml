@@ -23,6 +23,8 @@ steps:
   when:
     branch:
     - master
+    event:
+    - push
 - name: contributions
   image: node:14
   commands:
@@ -33,6 +35,8 @@ steps:
   when:
     branch:
     - master
+    event:
+    - push
 - name: githubcloud
   image: buildkite/puppeteer
   commands:
@@ -43,3 +47,5 @@ steps:
   when:
     branch:
     - master
+    event:
+    - push
