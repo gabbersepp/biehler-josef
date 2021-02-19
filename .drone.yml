@@ -12,7 +12,7 @@ steps:
   image: plugins/docker
   settings:
     registry: ghcr.io
-    repo: gabbersepp/biehler-josef
+    repo: ghcr.io/gabbersepp/biehler-josef
     password:
       from_secret: ghcrio_accesstoken
     username: gabbersepp
