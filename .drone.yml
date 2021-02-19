@@ -49,3 +49,10 @@ steps:
     - master
     event:
     - push
+- name: docker
+  image: plugins/docker
+  settings:
+    registry: ghcr.io
+    repo: gabbersepp/biehler-josef
+    passord:
+      from_secret: ghcrio_accesstoken
