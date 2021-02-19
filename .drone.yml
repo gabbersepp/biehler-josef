@@ -3,12 +3,12 @@ type: kubernetes
 name: biehler-josef
 steps:
 - name: install
-  image: node:14
+  image: node:12
   commands:
     - set -e
     - npm install
 - name: twitter
-  image: node:14
+  image: node:12
   commands:
     - npm run twitter 
   environment:
@@ -26,7 +26,7 @@ steps:
     event:
     - push
 - name: contributions
-  image: node:14
+  image: node:12
   commands:
     - npm run contributions
   environment:
