@@ -54,5 +54,5 @@ steps:
   settings:
     registry: ghcr.io
     repo: gabbersepp/biehler-josef
-    passord:
+    password:
       from_secret: ghcrio_accesstoken

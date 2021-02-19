@@ -24,11 +24,11 @@ ENV TWTR_ASECRET=$TWTR_ASECRET
 ENV GITHUB_TOKEN=$GITHUB_TOKEN
 ENV DEVTO_TOKEN=$DEVTO_TOKEN
 
-RUN npm run twitter 2>&1 | tee out_twitter.txt
-RUN npm run contributions 2>&1 | tee out_contributions.txt
-RUN npm run 11ty 2>&1 | tee out_11ty.txt
+#RUN npm run twitter 2>&1 | tee out_twitter.txt
+#RUN npm run contributions 2>&1 | tee out_contributions.txt
+#RUN npm run 11ty 2>&1 | tee out_11ty.txt
 
 FROM nginx
-COPY --from=node /biehlerjosef/app/dist /usr/share/nginx/html
+#COPY --from=node /biehlerjosef/app/dist /usr/share/nginx/html
 
 
