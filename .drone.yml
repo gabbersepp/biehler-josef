@@ -38,7 +38,7 @@ steps:
     event:
     - push
 - name: githubcloud
-  image: buildkite/puppeteer
+  image: gabbersepp/biehler-josef:puppeteer
   commands:
     - npm run githubcloud
   environment:
