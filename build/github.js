@@ -1,4 +1,6 @@
 const request = require("request");
+const path = require("path")
+const fs = require("fs");
 
 function readRepositories() {
     return new Promise(resolve => {
@@ -43,7 +45,10 @@ function readRepositories() {
                 }
 
             }
-            resolve(repos.filter(x => x));
+
+            repos = repos.filter(x => x);
+            fs.writeFileSync(path.resolve("app/data/repos.csv"), JSON.stringify(repos));
+            resolve(repos);
         });        
     });
 }
@@ -81,7 +86,6 @@ function getRequest(url) {
         })
     })
 }
-//readRepositories()
-module.exports = readRepositories;
+readRepositories()
 
 

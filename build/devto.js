@@ -1,4 +1,5 @@
 const request = require("request");
+const fs = require("fs");
 
 async function getAll() {
     let articles = [];
@@ -9,6 +10,8 @@ async function getAll() {
         currentResult = await getPage(page++);
         articles = [...articles, ...currentResult.data]; 
     }
+
+    fs.writeFileSync("app/data/devto.csv", JSON.stringify(articles));
     return articles;
 }
 
@@ -34,8 +37,4 @@ function getRequest(url) {
     });
 }
 
-//getAll();
-
-module.exports = {
-    getAll
-}
+getAll();

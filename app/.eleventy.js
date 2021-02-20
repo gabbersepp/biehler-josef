@@ -1,7 +1,13 @@
-const fs = require("fs-extra");
+const fs = require("fs");
 const sass = require("../build/sass-process.js");
-const readRepositories = require("../build/github.js");
-const devto = require("../build/devto");
+
+function readRepositories() {
+  return Promise.resolve(JSON.parse(fs.readFileSync("app/data/repos.csv").toString()))
+}
+
+function getAllDevTo() {
+  return Promise.resolve(JSON.parse(fs.readFileSync("app/data/devto.csv").toString()))
+}
 
 function readTweets() {
   const tweetsStr = fs.readFileSync("app/data/tweets.json").toString();
@@ -57,7 +63,7 @@ module.exports = function(eleventyConfig) {
       return markdown.render(value);
   });
 
-  const devtoPromise = extendArticles(devto.getAll());
+  const devtoPromise = extendArticles(getAllDevTo());
   const githubprojectpromise = readRepositories();
   const drawings = filterTweets(["digitalart", "comic", "cartoon", "draw", "drawing"]);
 

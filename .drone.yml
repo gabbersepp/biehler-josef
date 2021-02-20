@@ -8,6 +8,22 @@ steps:
     - set -e
     - npm install
 
+- name: githubrepos
+  image: node:12
+  commands:
+    - set -e
+    - node build/github.js
+  environment:
+    GITHUB_TOKEN:
+      from_secret: GITHUB_TOKEN
+- name: devto
+  image: node:12
+  commands:
+    - set -e
+    - node build/devto.js
+  environment:
+    DEVTO_TOKEN:
+      from_secret: DEVTO_TOKEN
 - name: docker
   image: plugins/docker
   settings:
