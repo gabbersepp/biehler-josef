@@ -18,8 +18,7 @@ function transform(scssPath, cssPath) {
     //Encapsulate rendered css from scssPath into watchResult variable
     const watchResult = sass.renderSync({file: scssPath});
     //Then write result css string to cssPath file
-    fs.writeFile(cssPath, watchResult.css.toString())
-    .catch(error => console.error(error))
+    fs.writeFileSync(cssPath, watchResult.css.toString())
 }
 
 module.exports = (scssPath, cssPath) => {
