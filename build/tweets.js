@@ -6,7 +6,7 @@ const basePath = path.resolve(".");
 const imagesBasePath = `${basePath}/app/data/images`;
 const tweetsBasePath = `${basePath}/app/data/tweets.json`;
 
-async function getLatestTweets() {
+async function getLatestTweets() { 
     let tweets = tweetDownloader.readTweets(tweetsBasePath);
     
     let maxId = BigInt(1);
