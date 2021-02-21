@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: biehlerjosef
-        image: ghcr.io/gabbersepp/biehlerjosef
+        image: ghcr.io/gabbersepp/biehler-josef
         imagePullPolicy: Always
         ports:
         - containerPort: 80
