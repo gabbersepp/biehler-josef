@@ -2,6 +2,99 @@ kind: pipeline
 type: kubernetes
 name: biehler-josef
 steps:
+- name: install
+  image: node:12
+  commands:
+    - set -e
+    - npm install
+
+- name: twitter
+  image: node:12
+  commands:
+    - npm run twitter 
+  environment:
+    TWTR_ASECRET:
+      from_secret: TWTR_ASECRET
+    TWTR_ATOKEN:
+      from_secret: TWTR_ATOKEN
+    TWTR_CKEY:
+      from_secret: TWTR_CKEY
+    TWTR_CSECRET:
+      from_secret: TWTR_CSECRET
+  when:
+    branch:
+    - master
+    event:
+    - push
+    
+- name: contributions
+  image: node:12
+  commands:
+    - npm run contributions
+  environment:
+    GITHUB_TOKEN:
+      from_secret: GITHUB_TOKEN
+  when:
+    branch:
+    - master
+    event:
+    - push
+
+- name: githubcloud
+  image: gabbersepp/biehler-josef:puppeteer
+  commands:
+    - npm run githubcloud
+  environment:
+     GITHUB_TOKEN:
+      from_secret: GITHUB_TOKEN
+  when:
+    branch:
+    - master
+    event:
+    - push
+
+- name: githubrepos
+  image: node:12
+  commands:
+    - set -e
+    - node build/github.js
+  environment:
+    GITHUB_TOKEN:
+      from_secret: GITHUB_TOKEN
+  when:
+    branch:
+    - master
+    event:
+    - push
+
+- name: devto
+  image: node:12
+  commands:
+    - set -e
+    - node build/devto.js
+  environment:
+    DEVTO_TOKEN:
+      from_secret: DEVTO_TOKEN
+  when:
+    branch:
+    - master
+    event:
+    - push
+
+- name: docker
+  image: plugins/docker
+  settings:
+    registry: ghcr.io
+    repo: ghcr.io/gabbersepp/biehler-josef
+    password:
+      from_secret: ghcrio_accesstoken
+    username: gabbersepp
+  when:
+    branch:
+    - master
+    event:
+    - push
+
 - name: deploy
   image: gabbersepp/drone-kubectl
   pull: always
