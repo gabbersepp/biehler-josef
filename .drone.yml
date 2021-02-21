@@ -3,7 +3,7 @@ type: kubernetes
 name: biehler-josef
 steps:
 - name: deploy
-  image: gabbersepp/drone-kubectl:0.0.1
+  image: gabbersepp/drone-kubectl:0.0.2
   settings:
     kubernetes_server: https://192.168.2.126:16443
     kubernetes_token:
