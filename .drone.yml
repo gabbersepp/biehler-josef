@@ -3,13 +3,14 @@ type: kubernetes
 name: biehler-josef
 steps:
 - name: deploy
-  image: sinlead/drone-kubectl
+  image: gabbersepp/drone-kubectl
   settings:
     kubernetes_server: https://192.168.2.126:16443
     kubernetes_token:
       from_secret: k8s_token
     kubernetes_cert:
       from_secret: k8s_cert
+    kubernetes_user: deploy
   commands:
     - kubectl delete deployment biehlerjosef
     - kubectl apply -f k8s/deployment.yaml
