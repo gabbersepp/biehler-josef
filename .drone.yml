@@ -3,7 +3,8 @@ type: kubernetes
 name: biehler-josef
 steps:
 - name: deploy
-  image: gabbersepp/drone-kubectl:0.0.6
+  image: gabbersepp/drone-kubectl
+  pull: always
   settings:
     kubernetes_server: https://192.168.2.126:16443
     kubernetes_token:
@@ -13,4 +14,4 @@ steps:
     kubernetes_user: deploy
   commands:
     - kubectl delete deployment biehlerjosef -n default
-    - kubectl apply -f k8s/deployment.yaml
+    - kubectl apply -f k8s/deployment.yaml -n default

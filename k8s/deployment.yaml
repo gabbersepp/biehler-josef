@@ -14,5 +14,6 @@ spec:
       containers:
       - name: biehlerjosef
         image: gabbersepp/biehlerjosef
+        imagePullPolicy: Always
         ports:
         - containerPort: 80
