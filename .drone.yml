@@ -12,5 +12,5 @@ steps:
       from_secret: k8s_cert
     kubernetes_user: deploy
   commands:
-    - kubectl delete deployment biehlerjosef
+    - kubectl delete deployment biehlerjosef -n default
     - kubectl apply -f k8s/deployment.yaml
