@@ -1,5 +1,5 @@
 const sass = require('sass');
-const fs = require('fs-extra');
+const fs = require('fs');
 const path = require('path');
 
 function transform(scssPath, cssPath) {
@@ -10,7 +10,9 @@ function transform(scssPath, cssPath) {
         }
         partialDir = partialDir + x + "/";
         console.log(`ensure >${partialDir} `)
-        fs.ensureDirSync(partialDir);
+        if (!fs.existsSync(partialDir)) {
+            fs.mkdirSync(partialDir);
+        }
     });
     console.log(`Watching ${path.dirname(scssPath)}...`);
     //Encapsulate rendered css from scssPath into watchResult variable

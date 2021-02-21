@@ -1,5 +1,5 @@
 const tweetDownloader = require("tweet-downloader");
-const fs = require("fs-extra");
+const fs = require("fs");
 
 async function getLatestTweets() {
     let tweets = tweetDownloader.readTweets("app/data/tweets.json");

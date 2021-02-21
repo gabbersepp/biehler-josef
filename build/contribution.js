@@ -1,5 +1,5 @@
 const request = require("request");
-const fs = require("fs-extra");
+const fs = require("fs");
 let ghToken = process.env.GITHUB_TOKEN;
 
 function getRequest(url, opts) {

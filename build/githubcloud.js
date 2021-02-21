@@ -1,5 +1,5 @@
 const gcc = require("github-code-cloud");
-const fs = require("fs-extra");
+const fs = require("fs");
 const path = require("path");
 
 var a = path.resolve(path.resolve("temp/cloud"));
