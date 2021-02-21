@@ -78,7 +78,7 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy({
     "app/assets": "assets",
-    "app/data/images": "data/images",
+    "app/data/images": "app/data/images",
     "app/node_modules/wordcloud/src/wordcloud2.js": "assets/wordcloud2.js"
   });
 
