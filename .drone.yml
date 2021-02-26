@@ -108,3 +108,8 @@ steps:
   commands:
     - kubectl delete deployment biehlerjosef -n default
     - kubectl apply -f k8s/deployment.yaml -n default
+  when:
+    branch:
+    - master
+    event:
+    - push
