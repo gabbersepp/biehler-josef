@@ -42,19 +42,19 @@ steps:
     - push
     - cron
 
-- name: githubcloud
-  image: gabbersepp/biehler-josef:puppeteer
-  commands:
-    - npm run githubcloud
-  environment:
-     GITHUB_TOKEN:
-      from_secret: GITHUB_TOKEN
-  when:
-    branch:
-    - master
-    event:
-    - push
-    - cron
+#- name: githubcloud
+#  image: gabbersepp/biehler-josef:puppeteer
+#  commands:
+#    - npm run githubcloud
+#  environment:
+#     GITHUB_TOKEN:
+#      from_secret: GITHUB_TOKEN
+#  when:
+#    branch:
+#    - master
+#    event:
+#    - push
+#    - cron
 
 - name: githubrepos
   image: node:12
