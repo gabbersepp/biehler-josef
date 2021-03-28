@@ -105,7 +105,7 @@ steps:
   image: gabbersepp/drone-kubectl
   pull: always
   settings:
-    kubernetes_server: https://192.168.2.126:16443
+    kubernetes_server: https://192.168.2.126:6443
     kubernetes_token:
       from_secret: k8s_token
     kubernetes_cert:
