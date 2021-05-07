@@ -3,13 +3,13 @@ type: kubernetes
 name: biehler-josef
 steps:
 - name: install
-  image: node:12
+  image: node:16
   commands:
     - set -e
     - npm install
 
 - name: twitter
-  image: node:12
+  image: node:16
   commands:
     - npm run twitter 
   environment:
@@ -29,7 +29,7 @@ steps:
     - cron
     
 - name: contributions
-  image: node:12
+  image: node:16
   commands:
     - npm run contributions
   environment:
@@ -57,7 +57,7 @@ steps:
 #    - cron
 
 - name: githubrepos
-  image: node:12
+  image: node:16
   commands:
     - set -e
     - node build/github.js
@@ -72,7 +72,7 @@ steps:
     - cron
 
 - name: devto
-  image: node:12
+  image: node:16
   commands:
     - set -e
     - node build/devto.js
