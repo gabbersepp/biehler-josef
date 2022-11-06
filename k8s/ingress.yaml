@@ -17,7 +17,8 @@ spec:
         backend:
           service:
             name: biehlerjosef-service
-            port: 80
+            port: 
+              number: 80
   - host: www.biehler-josef.de
     http:
       paths:
@@ -25,4 +26,5 @@ spec:
         backend:
           service:
             name: biehlerjosef-service
-            port: 80
+            port: 
+              number: 80
