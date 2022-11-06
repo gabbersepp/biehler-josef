@@ -14,6 +14,7 @@ spec:
     http:
       paths:
       - path: /
+        pathType: Exact
         backend:
           service:
             name: biehlerjosef-service
@@ -23,6 +24,7 @@ spec:
     http:
       paths:
       - path: /
+        pathType: Exact
         backend:
           service:
             name: biehlerjosef-service
