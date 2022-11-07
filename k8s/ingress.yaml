@@ -8,7 +8,7 @@ spec:
   tls:
   - hosts:
     - biehler-josef.de
-    secretName: microbot-ingress-tls
+    secretName: biehlerjosef-ingress-tls
   rules:
   - host: biehler-josef.de
     http:
