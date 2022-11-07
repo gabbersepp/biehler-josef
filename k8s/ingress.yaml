@@ -1,22 +1,32 @@
-apiVersion: extensions/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: biehlerjosef-ingress
   annotations:
-    kubernetes.io/ingress.class: nginx
+    cert-manager.io/cluster-issuer: lets-encrypt
 spec:
+  tls:
+  - hosts:
+    - biehler-josef.de
+    secretName: microbot-ingress-tls
   rules:
   - host: biehler-josef.de
     http:
       paths:
       - path: /
+        pathType: ImplementationSpecific
         backend:
-          serviceName: biehlerjosef-service
-          servicePort: 80
+          service:
+            name: biehlerjosef-service
+            port: 
+              number: 80
   - host: www.biehler-josef.de
     http:
       paths:
       - path: /
+        pathType: ImplementationSpecific
         backend:
-          serviceName: biehlerjosef-service
-          servicePort: 80
+          service:
+            name: biehlerjosef-service
+            port: 
+              number: 80
