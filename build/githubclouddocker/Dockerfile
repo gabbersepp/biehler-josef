@@ -1,6 +1,6 @@
 # from https://github.com/buildkite/docker-puppeteer/blob/master/Dockerfile
 # adjusted to my needs
-FROM node:12
+FROM node:21
 RUN  apt-get update \
      && apt-get install -y wget gnupg ca-certificates git \
      && wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
