@@ -1,0 +1,53 @@
+@import "_config";
+
+.speaker {
+    background-color: white;
+    height: 100%;
+
+    h1 {
+        text-align: center;
+    }
+
+    .nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
+    .speaker-row {
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        border-left: 1px solid $base;
+        border-top: 1px solid $base;
+        padding: $min-size * 2;
+
+        .speaker-row-caption {
+            position: absolute;
+            top: -20px;
+            left: -5px;
+            background-color: white;
+            padding-right: 5px;
+            font-size: $min-size * 1.5;
+        }
+
+        h2 {
+            background-color: $secondary;
+            color: $light;
+            text-align: center;
+            font-size: $min-size * 2
+        }
+
+        article {
+            margin-top: $min-size * 1.5;
+        }
+
+        .speaker-footer {
+            margin-top: $min-size * 1.5;
+            font-size: $min-size;
+        }
+    }
+}
+
+@import "speaker-breakpoints"

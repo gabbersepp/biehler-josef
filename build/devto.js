@@ -27,7 +27,12 @@ async function getPage(page) {
 
 function getRequest(url) {
     return new Promise((resolve, reject) => {
-        request(url, {headers: {"api-key": process.env.DEVTO_TOKEN}}, (error, response, body) => {
+        request(url, {
+            headers: {
+                "api-key": process.env.DEVTO_TOKEN,
+                "User-Agent": "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; .NET CLR 1.1.4322)"
+            }
+        }, (error, response, body) => {
             if (error) {
                 reject(error);
             } else {
