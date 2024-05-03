@@ -1,12 +1,15 @@
-[{
-		"details": [{
+[
+	{
+		"details": [
+			{
 				"node": {
 					"id": "MDExOlB1bGxSZXF1ZXN0MzQ2NjAwMjI1",
 					"title": "[chai] Adjust comment of isNaN / isNotNaN",
 					"url": "https://github.com/DefinitelyTyped/DefinitelyTyped/pull/40713",
 					"state": "MERGED"
 				}
-			}, {
+			},
+			{
 				"node": {
 					"id": "MDExOlB1bGxSZXF1ZXN0MzMwMzE5Nzk3",
 					"title": "[@types/chai] fix comment of function 'isAtMost'",
@@ -25,15 +28,18 @@
 			"url": "https://github.com/DefinitelyTyped/DefinitelyTyped",
 			"openGraphImageUrl": "https://avatars0.githubusercontent.com/u/3637556?s=400&v=4"
 		}
-	}, {
-		"details": [{
+	},
+	{
+		"details": [
+			{
 				"node": {
 					"id": "MDU6SXNzdWU0NDM4NjYyNjc=",
 					"title": "Angle Brackets around emails in text",
 					"url": "https://github.com/AngleSharp/AngleSharp/issues/790",
 					"state": "CLOSED"
 				}
-			}, {
+			},
+			{
 				"node": {
 					"id": "MDU6SXNzdWU0MTU2ODU0OTY=",
 					"title": "Maximum recursion depth",
@@ -52,71 +58,82 @@
 			"url": "https://github.com/AngleSharp/AngleSharp",
 			"openGraphImageUrl": "https://avatars3.githubusercontent.com/u/10828168?s=400&v=4"
 		}
-	}, {
-		"details": [{
+	},
+	{
+		"details": [
+			{
 				"node": {
 					"id": "MDExOlB1bGxSZXF1ZXN0MzYyNzczMTY0",
 					"title": "show 50 lines of the logmessage of cy.get, too",
 					"url": "https://github.com/cypress-io/cypress/pull/6163",
 					"state": "MERGED"
 				}
-			}, {
+			},
+			{
 				"node": {
 					"id": "MDU6SXNzdWU1NDg1NDgyODI=",
 					"title": "Do not truncate Command Log message in default commands",
 					"url": "https://github.com/cypress-io/cypress/issues/6145",
 					"state": "CLOSED"
 				}
-			}, {
+			},
+			{
 				"node": {
 					"id": "MDU6SXNzdWU1NDAxMTMxMjE=",
 					"title": "check if parentNode is null in all recursive functions",
 					"url": "https://github.com/cypress-io/cypress/issues/6002",
 					"state": "OPEN"
 				}
-			}, {
+			},
+			{
 				"node": {
 					"id": "MDU6SXNzdWU1Mzg0NzUxNjc=",
 					"title": "Debugging failing test with cy.on(\"fail\")",
 					"url": "https://github.com/cypress-io/cypress/issues/5970",
 					"state": "CLOSED"
 				}
-			}, {
+			},
+			{
 				"node": {
 					"id": "MDU6SXNzdWU1MzgwMjQ2NDg=",
 					"title": "get() inside should() with callback applies default assertion",
 					"url": "https://github.com/cypress-io/cypress/issues/5963",
 					"state": "OPEN"
 				}
-			}, {
+			},
+			{
 				"node": {
 					"id": "MDExOlB1bGxSZXF1ZXN0MzUwMTAwNzE1",
 					"title": "add hint for windows user to enable them to contribute, too, without …",
 					"url": "https://github.com/cypress-io/cypress/pull/5902",
 					"state": "MERGED"
 				}
-			}, {
+			},
+			{
 				"node": {
 					"id": "MDU6SXNzdWU1MzEwOTk5MzQ=",
 					"title": "Test is green after restart though it must fail",
 					"url": "https://github.com/cypress-io/cypress/issues/5846",
 					"state": "CLOSED"
 				}
-			}, {
+			},
+			{
 				"node": {
 					"id": "MDU6SXNzdWU1MjgxMDY5NDM=",
 					"title": "contains() does not keep scroll position if element with overflow:scroll is targeted",
 					"url": "https://github.com/cypress-io/cypress/issues/5788",
 					"state": "CLOSED"
 				}
-			}, {
+			},
+			{
 				"node": {
 					"id": "MDExOlB1bGxSZXF1ZXN0MzM2MDA4Nzgw",
 					"title": "Enable e2e test run on windows systems",
 					"url": "https://github.com/cypress-io/cypress/pull/5586",
 					"state": "MERGED"
 				}
-			}, {
+			},
+			{
 				"node": {
 					"id": "MDU6SXNzdWU1MTY2NjY3Nzg=",
 					"title": "Can not run packages/server e2e tests on Windows",
@@ -135,8 +152,10 @@
 			"url": "https://github.com/cypress-io/cypress",
 			"openGraphImageUrl": "https://repository-images.githubusercontent.com/31629751/ecd5d200-af93-11e9-93e3-145304e72266"
 		}
-	}, {
-		"details": [{
+	},
+	{
+		"details": [
+			{
 				"node": {
 					"id": "MDU6SXNzdWU1NTQyMDcxODc=",
 					"title": "How to handle Data in the same column that should not be Anonymized",
@@ -155,36 +174,42 @@
 			"url": "https://github.com/realrolfje/anonimatron",
 			"openGraphImageUrl": "https://repository-images.githubusercontent.com/33688164/90c4ef00-b466-11e9-9417-4e6e3ad127f2"
 		}
-	}, {
-		"details": [{
+	},
+	{
+		"details": [
+			{
 				"node": {
 					"id": "MDExOlB1bGxSZXF1ZXN0MzMzODEwNzE2",
 					"title": "add docu for new options argument of its()",
 					"url": "https://github.com/cypress-io/cypress-documentation/pull/2205",
 					"state": "MERGED"
 				}
-			}, {
+			},
+			{
 				"node": {
 					"id": "MDExOlB1bGxSZXF1ZXN0MzMyMjE5OTM5",
 					"title": "add link to recipe ",
 					"url": "https://github.com/cypress-io/cypress-documentation/pull/2195",
 					"state": "MERGED"
 				}
-			}, {
+			},
+			{
 				"node": {
 					"id": "MDExOlB1bGxSZXF1ZXN0MzI5Nzg4NTIz",
 					"title": "add faq: how to spy on console.log",
 					"url": "https://github.com/cypress-io/cypress-documentation/pull/2169",
 					"state": "MERGED"
 				}
-			}, {
+			},
+			{
 				"node": {
 					"id": "MDExOlB1bGxSZXF1ZXN0MzI5Nzc2NjE3",
 					"title": "[WIP] add new option 'bearer'",
 					"url": "https://github.com/cypress-io/cypress-documentation/pull/2168",
 					"state": "CLOSED"
 				}
-			}, {
+			},
+			{
 				"node": {
 					"id": "MDExOlB1bGxSZXF1ZXN0MzI4OTc5NjY4",
 					"title": "add documentation for bearer auth",
@@ -203,64 +228,74 @@
 			"url": "https://github.com/cypress-io/cypress-documentation",
 			"openGraphImageUrl": "https://avatars2.githubusercontent.com/u/8908513?s=400&v=4"
 		}
-	}, {
-		"details": [{
+	},
+	{
+		"details": [
+			{
 				"node": {
 					"id": "MDExOlB1bGxSZXF1ZXN0MzU0NDgzMjk0",
 					"title": "add example how i would utilize the CRI",
 					"url": "https://github.com/cypress-io/cypress-example-recipes/pull/384",
 					"state": "MERGED"
 				}
-			}, {
+			},
+			{
 				"node": {
 					"id": "MDU6SXNzdWU1Mzk1MTYzODU=",
 					"title": "Add example of using chrome remote debbuging interface",
 					"url": "https://github.com/cypress-io/cypress-example-recipes/issues/383",
 					"state": "CLOSED"
 				}
-			}, {
+			},
+			{
 				"node": {
 					"id": "MDExOlB1bGxSZXF1ZXN0MzUyMTMyOTcw",
 					"title": "add example: how to stub loading of ressources",
 					"url": "https://github.com/cypress-io/cypress-example-recipes/pull/379",
 					"state": "MERGED"
 				}
-			}, {
+			},
+			{
 				"node": {
 					"id": "MDU6SXNzdWU1MzY2MzMzMzQ=",
 					"title": "New example: Mock loading of ressources",
 					"url": "https://github.com/cypress-io/cypress-example-recipes/issues/378",
 					"state": "CLOSED"
 				}
-			}, {
+			},
+			{
 				"node": {
 					"id": "MDExOlB1bGxSZXF1ZXN0MzMyNDY0NDgx",
 					"title": "remove unnecessary files, fixes #348",
 					"url": "https://github.com/cypress-io/cypress-example-recipes/pull/358",
 					"state": "MERGED"
 				}
-			}, {
+			},
+			{
 				"node": {
 					"id": "MDExOlB1bGxSZXF1ZXN0MzMyNDMwODYw",
 					"title": "remove unnecessary files, fixes #348",
 					"url": "https://github.com/cypress-io/cypress-example-recipes/pull/357",
 					"state": "CLOSED"
 				}
-			}, {
+			},
+			{
 				"node": {
 					"id": "MDExOlB1bGxSZXF1ZXN0MzMyMjIwMTM2",
 					"title": "#92 add example that shows how one can monitor the website",
 					"url": "https://github.com/cypress-io/cypress-example-recipes/pull/356",
 					"state": "MERGED"
 				}
-			}, {
+			},
+			{
 				"node": {
 					"id": "MDU6SXNzdWU1MDk0MDQwOTk=",
 					"title": "Remove unnecessary files from examples",
 					"url": "https://github.com/cypress-io/cypress-example-recipes/issues/348",
 					"state": "CLOSED"
 				}
-			}, {
+			},
+			{
 				"node": {
 					"id": "MDExOlB1bGxSZXF1ZXN0MzI5NDIyMTcz",
 					"title": "add example: how to stub console.log",
@@ -279,8 +314,10 @@
 			"url": "https://github.com/cypress-io/cypress-example-recipes",
 			"openGraphImageUrl": "https://avatars2.githubusercontent.com/u/8908513?s=400&v=4"
 		}
-	}, {
-		"details": [{
+	},
+	{
+		"details": [
+			{
 				"node": {
 					"id": "MDU6SXNzdWU1NDcwNjI0MTM=",
 					"title": "With Hunspell no errors are found",
@@ -299,15 +336,18 @@
 			"url": "https://github.com/bartosz-antosik/vscode-spellright",
 			"openGraphImageUrl": "https://avatars1.githubusercontent.com/u/20492548?s=400&v=4"
 		}
-	}, {
-		"details": [{
+	},
+	{
+		"details": [
+			{
 				"node": {
 					"id": "MDExOlB1bGxSZXF1ZXN0MjcwNzgyMDEz",
 					"title": "#48 allow additional entry points to support some more complexe scena…",
 					"url": "https://github.com/cypress-io/cypress-webpack-preprocessor/pull/49",
 					"state": "CLOSED"
 				}
-			}, {
+			},
+			{
 				"node": {
 					"id": "MDU6SXNzdWU0MjgxMDMyOTI=",
 					"title": "Modules imported in support file are not visible through webpack",
@@ -326,8 +366,10 @@
 			"url": "https://github.com/cypress-io/cypress-webpack-preprocessor",
 			"openGraphImageUrl": "https://avatars2.githubusercontent.com/u/8908513?s=400&v=4"
 		}
-	}, {
-		"details": [{
+	},
+	{
+		"details": [
+			{
 				"node": {
 					"id": "MDU6SXNzdWU1NjY4MTg2NDE=",
 					"title": "JavaScriptTemplateInvalidDataFormatError: Invalid data format returned",
@@ -346,71 +388,82 @@
 			"url": "https://github.com/11ty/eleventy",
 			"openGraphImageUrl": "https://repository-images.githubusercontent.com/112150776/57c07300-6132-11e9-992f-604a24e67c83"
 		}
-	}, {
-		"details": [{
+	},
+	{
+		"details": [
+			{
 				"node": {
 					"id": "MDExOlB1bGxSZXF1ZXN0MzgxODc3NjU5",
 					"title": "add testimonials from snook",
 					"url": "https://github.com/11ty/11ty-website/pull/352",
 					"state": "MERGED"
 				}
-			}, {
+			},
+			{
 				"node": {
 					"id": "MDExOlB1bGxSZXF1ZXN0MzgxODc1NTk5",
 					"title": "add shanehudson",
 					"url": "https://github.com/11ty/11ty-website/pull/351",
 					"state": "MERGED"
 				}
-			}, {
+			},
+			{
 				"node": {
 					"id": "MDExOlB1bGxSZXF1ZXN0MzgxODQ4Mzk1",
 					"title": "add crlf.site",
 					"url": "https://github.com/11ty/11ty-website/pull/350",
 					"state": "MERGED"
 				}
-			}, {
+			},
+			{
 				"node": {
 					"id": "MDExOlB1bGxSZXF1ZXN0MzgxODQ4MDA1",
 					"title": "add andrew rico",
 					"url": "https://github.com/11ty/11ty-website/pull/349",
 					"state": "MERGED"
 				}
-			}, {
+			},
+			{
 				"node": {
 					"id": "MDExOlB1bGxSZXF1ZXN0MzgxODQ3NTcy",
 					"title": "add kajrietberg",
 					"url": "https://github.com/11ty/11ty-website/pull/348",
 					"state": "MERGED"
 				}
-			}, {
+			},
+			{
 				"node": {
 					"id": "MDExOlB1bGxSZXF1ZXN0MzgxODQ3MjU5",
 					"title": "add screenread closes #168",
 					"url": "https://github.com/11ty/11ty-website/pull/347",
 					"state": "MERGED"
 				}
-			}, {
+			},
+			{
 				"node": {
 					"id": "MDExOlB1bGxSZXF1ZXN0MzgxODQ2OTEx",
 					"title": "add 11ty encore example",
 					"url": "https://github.com/11ty/11ty-website/pull/346",
 					"state": "MERGED"
 				}
-			}, {
+			},
+			{
 				"node": {
 					"id": "MDExOlB1bGxSZXF1ZXN0MzgxNTEzNjQw",
 					"title": "add andrewpucci and shotplot",
 					"url": "https://github.com/11ty/11ty-website/pull/345",
 					"state": "MERGED"
 				}
-			}, {
+			},
+			{
 				"node": {
 					"id": "MDExOlB1bGxSZXF1ZXN0MzgxNDYxODk5",
 					"title": "add https://grochtdreis.de/",
 					"url": "https://github.com/11ty/11ty-website/pull/344",
 					"state": "MERGED"
 				}
-			}, {
+			},
+			{
 				"node": {
 					"id": "MDExOlB1bGxSZXF1ZXN0MzgxNDYwMTcz",
 					"title": "add new satrter project on glitch",
@@ -428,6 +481,28 @@
 			},
 			"url": "https://github.com/11ty/11ty-website",
 			"openGraphImageUrl": "https://avatars3.githubusercontent.com/u/35147177?s=400&v=4"
+		}
+	},
+	{
+		"details": [
+			{
+				"node": {
+					"id": "I_kwDOAiOjoc5xokb6",
+					"title": "dotnet-dump analyze documentation lacks information about dumpheap command",
+					"url": "https://github.com/dotnet/docs/issues/37202",
+					"state": "OPEN"
+				}
+			}
+		],
+		"repo": {
+			"id": "MDEwOlJlcG9zaXRvcnkzNTg5MDA4MQ==",
+			"nameWithOwner": "dotnet/docs",
+			"shortDescriptionHTML": "This repository contains .NET Documentation.",
+			"stargazers": {
+				"totalCount": 4119
+			},
+			"url": "https://github.com/dotnet/docs",
+			"openGraphImageUrl": "https://opengraph.githubassets.com/79875b27014918e9be3ff7d839e2bb698cfb543975144924dade3eab3e3f6ca0/dotnet/docs"
 		}
 	}
 ]

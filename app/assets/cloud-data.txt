@@ -16,3 +16,6 @@ Clip Studio Paint;This is my favorite tool for drawing on my MS Surface Tablet. 
 Java;Well, I know how to code in Java. My last big Java project I worked in was some kind of marketplace.
 Big O;Know the difference between n^3 and nlogn. You don't? Then take a look at "Big O".
 C++;2020 I started again with C++. Goal: Writing a .NET profiler. Very nice language. Surely something I want to do more in the future.
+Cypress.io;One of several modern testing frameworks. I also contributed to their github repositories. 
+SQL;Optimizing a slow query starts not in the execution plan. 
+Trainee;Performance analysis in the first year of school? Finding objects in memory dumps before you even know what objects are made off? If this sounds like something you want to do, the come to our team as trainee.

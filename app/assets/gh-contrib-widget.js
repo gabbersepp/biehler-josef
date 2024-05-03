@@ -44,6 +44,7 @@ window.drawContributions = async function (id) {
 
     let details = await fetch("/assets/contrib.json");
     details = await details.json();
+    details.reverse();
 
       let wrapper = document.getElementById(id);
           while (wrapper.firstChild) {

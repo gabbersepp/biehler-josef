@@ -33,7 +33,7 @@ async function getContributions(login) {
   const gql = {query: `
   {
     user(login: "${login}") {
-      repositoriesContributedTo(includeUserRepositories: false, first: 10, privacy: PUBLIC) {
+      repositoriesContributedTo(includeUserRepositories: false, first: 100, privacy: PUBLIC, contributionTypes: [COMMIT, ISSUE, PULL_REQUEST, REPOSITORY]) {
         edges {
           node {
             id
@@ -94,7 +94,7 @@ async function getAllContributions() {
       throw e;
     }
 
-    const details = [];
+    let details = JSON.parse(fs.readFileSync("app/assets/contrib.json"));
 
       if (contib.length > 0) {
         for(let i = 0, len = contib.length; i < len; i++) {
