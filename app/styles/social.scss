@@ -7,7 +7,8 @@
     padding-left: $min-size;
     padding-bottom: $min-size;
     border-radius: $min-size;
-    position: fixed;
+    z-index: 1;
+    position: absolute;
     top: 0;
     right: 0;
 

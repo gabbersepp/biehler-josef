@@ -59,8 +59,9 @@ html, body {
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    height: 100%;
+    //height: 100%;
     background-color: white;
+    padding-bottom: $min-size * 4;
 }
 
 footer {
