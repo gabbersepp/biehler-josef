@@ -47,7 +47,7 @@ function readRepositories() {
             }
 
             repos = repos.filter(x => x);
-            fs.writeFileSync(path.resolve("app/data/repos.csv"), JSON.stringify(repos));
+            fs.writeFileSync(path.resolve("src/app/data/repos.csv"), JSON.stringify(repos));
             resolve(repos);
         });        
     });

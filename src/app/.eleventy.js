@@ -2,15 +2,15 @@ const fs = require("fs");
 const sass = require("../build/sass-process.js");
 
 function readRepositories() {
-  return Promise.resolve(JSON.parse(fs.readFileSync("app/data/repos.csv").toString()))
+  return Promise.resolve(JSON.parse(fs.readFileSync("src/app/data/repos.csv").toString()))
 }
 
 function getAllDevTo() {
-  return Promise.resolve(JSON.parse(fs.readFileSync("app/data/devto.csv").toString()))
+  return Promise.resolve(JSON.parse(fs.readFileSync("src/app/data/devto.csv").toString()))
 }
 
 function readTweets() {
-  const tweetsStr = fs.readFileSync("app/data/tweets.json").toString();
+  const tweetsStr = fs.readFileSync("src/app/data/tweets.json").toString();
   const tweets = JSON.parse(tweetsStr);
   return tweets;
 }
@@ -36,7 +36,7 @@ function filterTweets(hashtags) {
 async function extendArticles(articlesPromise) {
   const articles = await articlesPromise;
   const tweets = readTweets();
-  const devtoToTweet = JSON.parse(fs.readFileSync("app/data/devto-to-tweet.json").toString());
+  const devtoToTweet = JSON.parse(fs.readFileSync("src/app/data/devto-to-tweet.json").toString());
   articles.forEach(article => {
     article.devReactions = article.comments_count + article.public_reactions_count + article.page_views_count;
     
@@ -77,17 +77,17 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addCollection("postsSlice", async () => (await devtoPromise).slice(0, 3));
 
   eleventyConfig.addPassthroughCopy({
-    "app/assets": "assets",
-    "app/data/images": "app/data/images",
-    "app/node_modules/wordcloud/src/wordcloud2.js": "assets/wordcloud2.js"
+    "src/app/assets": "assets",
+    "src/app/data/images": "src/app/data/images",
+    "src/app/node_modules/wordcloud/src/wordcloud2.js": "assets/wordcloud2.js"
   });
 
-  sass('app/styles/index.scss', 'app/dist/index.css');
+  sass('src/app/styles/index.scss', 'src/app/dist/index.css');
 
   return {
     dir: {
-      input: "app/views",
-      output: "app/dist",
+      input: "src/app/views",
+      output: "src/app/dist",
       includes: "../_includes"
     }
   }

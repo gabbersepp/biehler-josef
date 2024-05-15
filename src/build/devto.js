@@ -11,7 +11,7 @@ async function getAll() {
         articles = [...articles, ...currentResult.data]; 
     }
 
-    fs.writeFileSync("app/data/devto.csv", JSON.stringify(articles));
+    fs.writeFileSync("src/app/data/devto.csv", JSON.stringify(articles));
     return articles;
 }
 

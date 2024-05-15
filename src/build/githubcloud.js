@@ -11,7 +11,7 @@ async function run() {
         path.resolve("./temp/cloud"), 0.8, 
         { maxRetry: 1000, backgroundColor: "white", height: 800 }, 
         { headless: true, args: ['--no-sandbox'] })
-        .then(() => fs.copyFileSync("temp/cloud/export/img.png", "app/assets/codecloud.png"))
+        .then(() => fs.copyFileSync("temp/cloud/export/img.png", "src/app/assets/codecloud.png"))
         .catch(e => {
             console.error(e);
             process.exit(-1);

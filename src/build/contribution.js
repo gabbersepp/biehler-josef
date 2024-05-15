@@ -94,7 +94,7 @@ async function getAllContributions() {
       throw e;
     }
 
-    let details = JSON.parse(fs.readFileSync("app/assets/contrib.json"));
+    let details = JSON.parse(fs.readFileSync("src/app/assets/contrib.json"));
 
       if (contib.length > 0) {
         for(let i = 0, len = contib.length; i < len; i++) {
@@ -103,7 +103,7 @@ async function getAllContributions() {
         }
       }
 
-      fs.writeFileSync("app/assets/contrib.json", JSON.stringify(details));
+      fs.writeFileSync("src/app/assets/contrib.json", JSON.stringify(details));
 }
 
 getAllContributions().catch(e => {
