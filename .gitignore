@@ -1,4 +1,4 @@
-/dist
+src/app/dist
 /temp
 
 # Logs

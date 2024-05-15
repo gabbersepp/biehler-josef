@@ -88,7 +88,7 @@ module.exports = function(eleventyConfig) {
     dir: {
       input: "src/app/views",
       output: "src/app/dist",
-      includes: "../_includes"
+      includes: "./../_includes"
     }
   }
 }
