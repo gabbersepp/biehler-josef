@@ -6,7 +6,7 @@ RUN npm install
 
 COPY ./src /app
 
-RUN npm run 11ty 2>&1 | tee out_11ty.txt
+RUN DEBUG=Eleventy* npm run 11ty 2>&1 | tee out_11ty.txt
 
 FROM nginx
 COPY --from=node /app/app/dist /usr/share/nginx/html
