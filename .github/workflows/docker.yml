@@ -68,6 +68,6 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
-          cache-to: type=gha,mode=max
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          cache-to: type=gha,mode=max    
+          build-args: |
+            "GITHUB_TOKEN=${{ secrets.GH_TOKEN }}"
