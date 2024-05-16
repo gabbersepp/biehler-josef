@@ -2,6 +2,8 @@ const request = require("request");
 const fs = require("fs");
 let ghToken = process.env.GITHUB_TOKEN;
 
+console.log(ghToken.length + " länge");
+
 function getRequest(url, opts) {
     return new Promise((resolve, reject) => {
         request(url, opts, (error, response, body) => {
