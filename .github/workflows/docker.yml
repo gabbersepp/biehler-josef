@@ -71,3 +71,5 @@ jobs:
           cache-to: type=gha,mode=max    
           secrets: |
             "GITHUB_TOKEN=${{ secrets.GH_TOKEN }}"
+            "DEVTO_TOKEN=${{ secrets.DEVTO_TOKEN }}"
+            
