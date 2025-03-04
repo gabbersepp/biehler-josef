@@ -1,4 +1,4 @@
-FROM node:12 as node
+FROM node:20 as node
 COPY package.json /app/package.json
 COPY package-lock.json /app/package-lock.json
 WORKDIR /app
