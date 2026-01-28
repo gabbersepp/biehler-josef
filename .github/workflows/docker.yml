@@ -33,6 +33,13 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+      - name: Build cloud
+        env: |
+            "GITHUB_TOKEN=${{ secrets.GH_TOKEN }}"
+            "DEVTO_TOKEN=${{ secrets.DEVTO_TOKEN }}"
       # Set up BuildKit Docker container builder to be able to build
       # multi-platform images and export cache
       # https://github.com/docker/setup-buildx-action
